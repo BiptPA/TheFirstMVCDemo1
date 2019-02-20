@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.dao.IResumeaddDao">
+    <resultMap id="resumeid" type="example.pojo.Resume">
+        <id column="resumeid" jdbcType="INTEGER" property="resumeid" />
+        <result column="userid" jdbcType="INTEGER" property="userid" />
+        <result column="realname" jdbcType="VARCHAR" property="realname" />
+        <result column="idnum" jdbcType="VARCHAR" property="idnum" />
+        <result column="sex" jdbcType="VARCHAR" property="sex" />
+        <result column="education" jdbcType="VARCHAR" property="education" />
+        <result column="school" jdbcType="VARCHAR" property="school" />
+        <result column="languages" jdbcType="VARCHAR" property="languages" />
+        <result column="lanlevel" jdbcType="VARCHAR" property="lanlevel" />
+        <result column="comlevel" jdbcType="VARCHAR" property="comlevel" />
+        <result column="major" jdbcType="VARCHAR" property="major" />
+        <result column="workexp" jdbcType="VARCHAR" property="workexp" />
+        <result column="positions" jdbcType="VARCHAR" property="positions" />
+        <result column="exsalary" jdbcType="VARCHAR" property="exsalary" />
+        <result column="phonenum" jdbcType="INTEGER" property="phonenum" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="qq" jdbcType="INTEGER" property="qq" />
+        <result column="nowaddress" jdbcType="VARCHAR" property="nowaddress" />
+    </resultMap>
+<insert id="insert" parameterType="example.pojo.Resume">
+    insert into t_resume (userid, realname, idnum, sex, education, school, languages, lanlevel,comlevel, major, workexp, positions, exsalary, phonenum, email, qq, nowaddress) values(#{userid},#{realname},#{idnum},#{sex},#{education},#{school,#{languages},#{lanlevel},#{comlevel},#{major},#{workexp},#{positions},#{exsalary},#{phonenum},#{email},#{qq},#{nowaddress});
+</insert>
+    <!--<sql id="Base_Column_List">-->
+      <!--resumeid, userid, realname, idnum, sex, education, school, languages, lanlevel,comlevel, major, workexp, positions, exsalary, phonenum, email, qq, nowaddress-->
+    <!--</sql>-->
+
+    <!--<select id="getAllResumes" resultMap="BaseResultMap">-->
+        <!--select-->
+        <!--<include refid="Base_Column_List" />-->
+        <!--from t_resume-->
+    <!--</select>-->
+
+    <!--<select id="getAllResumes" parameterType="string" resultType="User">-->
+    <!--select * from t_resume where resumeid = #{resumeid}-->
+    <!--</select>-->
+</mapper>

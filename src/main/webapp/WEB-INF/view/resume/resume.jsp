@@ -60,7 +60,7 @@
         </tr>
     </c:forEach>
     <div>
-        <a href="/user/getUser">新增简历</a>
+        <a href="/resume/resumeadd.jsp">新增简历</a>
         <a href="/user/getUser">修改简历</a>
         <a href="/user/getUser">删除简历</a>
         <%--<a href="/resume/getResume"><input type = "submit" value = "查看" /></a>--%>
