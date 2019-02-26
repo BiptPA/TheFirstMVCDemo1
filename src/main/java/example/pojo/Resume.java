@@ -144,7 +144,7 @@ public class Resume {
     public void setNowaddress(String nowaddress) {
         this.nowaddress = nowaddress;
     }
-
+//[{"1111":1,"12":"12"},{}]
     private int resumeid;
     private int userid;
     private String realname;

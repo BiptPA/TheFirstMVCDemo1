@@ -24,4 +24,9 @@ public class ResumeselectController {
         request.setAttribute("resume", re.get(0));
         return "resume/resume";
     }
+
+
+
+
+
 }

@@ -1,17 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2019/2/15
-  Time: 14:44
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=utf8"
          pageEncoding="utf8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-    <title>简历详情</title>
+    <title>Title</title>
 </head>
 <body>
 <div class="text" style=" text-align:center;"><h1>个人简历详情</h1></div>
@@ -60,13 +54,11 @@
         </tr>
     </c:forEach>
     <div>
-        <a href="/resume/resumeadd.jsp">新增简历</a>
+        <a href="/user/addUser">新增简历</a>
         <a href="/user/getUser">修改简历</a>
         <a href="/user/getUser">删除简历</a>
-        <%--<a href="/resume/getResume"><input type = "submit" value = "查看" /></a>--%>
     </div>
 </table>
-
 
 </body>
 </html>
