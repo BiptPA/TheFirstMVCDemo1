@@ -28,13 +28,20 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User getUserById(String id) {
-            List<User> users = userDao.findUserById(Integer.valueOf(id));
+            List<User> users = userDao.findUserById( id);
             if (users.size() > 0) {
                 return users.get(0);
             }
             return null;
     }
 
+    @Override
+    public int update(String username)
+    {
+        User edituser = new User();
+        edituser.setUserName(username);
+        return userDao.updateUsers(edituser);
+    }
 
     //下面是实现登陆的服务层代码；
     //自动注入iuserdao 用于访问数据库

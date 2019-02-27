@@ -28,6 +28,12 @@
         from t_user
         where auto_id = #{autoId, jdbcType=INTEGER}
     </select>
+    <update id="updateUsers" parameterType="example.pojo.User">
+    update t_user
+    set username = #{username,jdbcType=VARCHAR},
+    where auto_id = #{autoid,jdbcType=INTEGER}
+    </update>
+
     <!--<select id="selectByName" parameterType="string" resultType="User">-->
         <!--select * from user where username = #{username}-->
     <!--</select>-->

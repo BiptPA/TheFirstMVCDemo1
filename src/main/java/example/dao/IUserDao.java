@@ -12,7 +12,9 @@ public interface IUserDao {
 
     int insertUsers(User user);
 
-    List<User> findUserById(@Param("autoId") Integer autoId);
+    int updateUsers(User edituser);
+
+    List<User> findUserById(@Param("autoId") String autoId);
 //    public User selectByName(String username);
 
 }

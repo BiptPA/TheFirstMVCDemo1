@@ -21,16 +21,21 @@
 <body>
 <h1></h1>
 <form id="listForm" method="post">
-    <table>
+    <table align="center" valign="center" border="1">
+        <tr>
+            <th>用户ID</th>
+            <th>用户名</th>
+        </tr>
         <c:forEach items="${list}" var="data">
             <tr>
                 <td>${data.autoId}</td>
                 <td>${data.userName}</td>
-                <td><input type="button" value="修改" onclick="updateUser(${data.autoId});"></td>
+                <td><form action="/user/updateUser" method="post" value="修改" onclick="updateUser(${data.autoId});"></td>
             </tr>
         </c:forEach>
 
     </table>
+    <td><input type="button" value="修改" onclick="updateUser(${data.autoId});"></td>
 </form>
 </body>
 </html>

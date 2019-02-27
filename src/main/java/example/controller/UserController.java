@@ -39,7 +39,7 @@ public class UserController {
         return null;
     }
 
-    @RequestMapping(value = "updateJsp", method = RequestMethod.POST)
+    @RequestMapping(value = "updateJsp", method = RequestMethod.GET)
     public String updateJsp(HttpServletRequest request) {
         String id = request.getParameter("autoId");
         //根据id查询用户信息
@@ -47,6 +47,15 @@ public class UserController {
        request.setAttribute("user", user);
        return "user/edituser";
     }
+    @RequestMapping(value = "updateUser",method = RequestMethod.POST)
+    public String updateUser(HttpServletRequest request)
+    {
+        String username = request.getParameter("username");
+        int updateuser = userService.update(username);
+        return "user/edituser";
+    }
+
+
 //    @RequestMapping(value = "/sql", produces = "text/html;charset=UTF-8")
 //    @ResponseBody
 //    public String sayHi(HttpServletRequest request, HttpServletResponse response) {
