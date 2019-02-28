@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="example.dao.IUserDao">
     <resultMap id="BaseResultMap" type="example.pojo.User">
-        <id column="auto_id" jdbcType="INTEGER" property="autoId" />
-        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <id column="autoid" jdbcType="INTEGER" property="autoid" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
         <result column="password" jdbcType="VARCHAR" property="password" />
     </resultMap>
 
     <sql id="Base_Column_List">
-      auto_id, user_name, password
+      autoid, username, password
     </sql>
 
     <select id="getAllUsers" resultMap="BaseResultMap">
@@ -18,20 +18,20 @@
     </select>
 
     <insert id="insertUsers" parameterType="example.pojo.User">
-        insert into t_user (user_name, password)
-        values (#{userName,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
+        insert into t_user (username, password)
+        values (#{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
     </insert>
 
     <select id="findUserById" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from t_user
-        where auto_id = #{autoId, jdbcType=INTEGER}
+        where autoid = #{autoid, jdbcType=INTEGER}
     </select>
     <update id="updateUsers" parameterType="example.pojo.User">
     update t_user
-    set username = #{username,jdbcType=VARCHAR},
-    where auto_id = #{autoid,jdbcType=INTEGER}
+    set username = #{username,jdbcType=VARCHAR}
+    where autoid = #{autoid,jdbcType=INTEGER}
     </update>
 
     <!--<select id="selectByName" parameterType="string" resultType="User">-->

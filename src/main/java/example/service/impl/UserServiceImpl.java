@@ -21,7 +21,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public int insertUser(String username, String password) {
         User user = new User();
-        user.setUserName(username);
+        user.setUsername(username);
         user.setPassword(password);
         return userDao.insertUsers(user);
     }
@@ -36,10 +36,12 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public int update(String username)
+    public int update(String id,String username)
     {
         User edituser = new User();
-        edituser.setUserName(username);
+        int autoid=Integer.parseInt(id);
+        edituser.setAutoid(autoid);
+        edituser.setUsername(username);
         return userDao.updateUsers(edituser);
     }
 

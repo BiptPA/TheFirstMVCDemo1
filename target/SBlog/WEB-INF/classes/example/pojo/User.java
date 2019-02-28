@@ -1,23 +1,25 @@
 package example.pojo;
 
 public class User {
-    private int autoId;
-    private String userName;
+    private int autoid;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    private String username;
     private String password;
 
-    public int getAutoId() {
-        return autoId;
+    public int getAutoid() {
+        return autoid;
     }
 
-    public void setAutoId(int autoId) {
-        this.autoId = autoId;
-    }
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setAutoid(int autoid) {
+        this.autoid = autoid;
     }
 
     public String getPassword() {

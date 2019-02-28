@@ -4,7 +4,7 @@ import example.pojo.User;
 import example.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 @Component
@@ -16,6 +16,31 @@ public class UserServiceImpl implements IUserService {
     @Override
     public List<User> getAllUser() {
         return userDao.getAllUsers();
+    }
+
+    @Override
+    public int insertUser(String username, String password) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        return userDao.insertUsers(user);
+    }
+
+    @Override
+    public User getUserById(String id) {
+            List<User> users = userDao.findUserById( id);
+            if (users.size() > 0) {
+                return users.get(0);
+            }
+            return null;
+    }
+
+    @Override
+    public int update(String username)
+    {
+        User edituser = new User();
+        edituser.setUsername(username);
+        return userDao.updateUsers(edituser);
     }
 
     //下面是实现登陆的服务层代码；

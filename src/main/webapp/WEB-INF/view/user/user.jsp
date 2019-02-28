@@ -7,15 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <title>Title</title>
     <script type="text/javascript">
-        function updateUser(id) {
-            document.getElementById("listForm").action = "/user/updateJsp?autoId="+ id;
-            document.getElementById("listForm").submit();
-            // form.action
-            // $ajax({
-            //
-            // })
+            function updateUser(id) {
+                document.getElementById("listForm").action = "/user/updateJsp?autoid="+ id;
+                document.getElementById("listForm").submit();
+                // form.action
+                // $ajax({
+                //
+                // })
 
-        }
+            }
+        <%--function updateUsers(id) {--%>
+            <%--document.getElementById("listForm").action = "/user/updateUsers?autoid="+ id;--%>
+            <%--document.getElementById("listForm").submit();--%>
+            <%--// form.action--%>
+            <%--// $ajax({--%>
+            <%--//--%>
+            <%--// })--%>
+
+        <%--}--%>
     </script>
 </head>
 <body>
@@ -25,17 +34,20 @@
         <tr>
             <th>用户ID</th>
             <th>用户名</th>
+
         </tr>
         <c:forEach items="${list}" var="data">
             <tr>
-                <td>${data.autoId}</td>
-                <td>${data.userName}</td>
-                <td><form action="/user/updateUser" method="post" value="修改" onclick="updateUser(${data.autoId});"></td>
+                <td>${data.autoid}</td>
+                <td>${data.username}</td>
+                <td><input type="submit" value="修改"/></td>
+                <td><input type="button" value="删除"/></td>
             </tr>
         </c:forEach>
 
     </table>
-    <td><input type="button" value="修改" onclick="updateUser(${data.autoId});"></td>
+    <%--<td><input type="button" value="修改" onclick="updateUser(${data.autoId});"></td>--%>
+    <%--<td><form action="/user/updateUsers" method="post" value="修改" onclick="updateUser(${data.autoid});"></td>--%>
 </form>
 </body>
 </html>

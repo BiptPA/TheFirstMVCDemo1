@@ -4,16 +4,17 @@ import example.pojo.Usertwo;
 import example.service.IUserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import javax.annotation.Resource;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/user/")
 public class UserController {
-    private static final Logger logger = Logger.getLogger(UserController.class);
+   // private static final Logger logger = Logger.getLogger(UserController.class);
 
     @Autowired
     private IUserService userService;
@@ -21,9 +22,37 @@ public class UserController {
     @RequestMapping(value = "getUser", method = RequestMethod.GET)
     public String getUser(HttpServletRequest request) {
         List<User> users = userService.getAllUser();
-        System.out.println(users);
-        request.setAttribute("userList", users.get(0));
-        return "user/userList";
+        request.setAttribute("list", users);
+        return "user/user";
+    }
+
+    @RequestMapping(value = "addJsp", method = RequestMethod.GET)
+    public String addJsp(){
+        return "user/adduser";
+    }
+
+    @RequestMapping(value = "addUser", method = RequestMethod.POST)
+    public String addUser (HttpServletRequest request){
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        int adduser = userService.insertUser(username,password);
+        return null;
+    }
+
+    @RequestMapping(value = "updateJsp", method = RequestMethod.GET)
+    public String updateJsp(HttpServletRequest request) {
+        String id = request.getParameter("autoid");
+        //根据id查询用户信息
+       User user = userService.getUserById(id);
+       request.setAttribute("user", user);
+       return "user/edituser";
+    }
+    @RequestMapping(value = "updateUsers",method = RequestMethod.POST)
+    public String updateUsers(HttpServletRequest request)
+    {
+        String username = request.getParameter("username");
+        int updateuser = userService.update(username);
+        return "user/edituser";
     }
 
 
