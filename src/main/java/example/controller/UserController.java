@@ -35,7 +35,7 @@ public class UserController {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         int adduser = userService.insertUser(username,password);
-        return null;
+        return "redirect:/user/getUser";
     }
 
     @RequestMapping(value = "updateJsp", method = RequestMethod.POST)
@@ -46,20 +46,21 @@ public class UserController {
        request.setAttribute("user", user);
        return "user/edituser";
     }
-    @RequestMapping(value = "updateUsers",method = RequestMethod.GET)
+    @RequestMapping(value = "updateUsers",method = RequestMethod.POST)
     public String updateUsers(HttpServletRequest request)
     {
         String id = request.getParameter("autoid");
+        System.out.println(id);
         String username = request.getParameter("username");
         int updateuser = userService.update(id,username);
-        return "user/edituser";
+        return "redirect:/user/getUser";
     }
 
     @RequestMapping("/deleteUser")
     public String deleteUser(int id)
     {
         userService.deleteUser(id);
-        return "user/user";
+        return "redirect:/user/getUser";
     }
 
 

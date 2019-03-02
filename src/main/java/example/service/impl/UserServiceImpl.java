@@ -39,6 +39,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public int update(String id,String username)
     {
+        System.out.println(id);
         User edituser = new User();
         int autoid=Integer.parseInt(id);
         edituser.setAutoid(autoid);

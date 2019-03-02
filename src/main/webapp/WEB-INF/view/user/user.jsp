@@ -10,26 +10,14 @@
             function updateUser(id) {
                 document.getElementById("listForm").action = "/user/updateJsp?autoid="+ id;
                 document.getElementById("listForm").submit();
-                // form.action
-                // $ajax({
-                //
-                // })
 
             }
-        <%--function updateUsers(id) {--%>
-            <%--document.getElementById("listForm").action = "/user/updateUsers?autoid="+ id;--%>
-            <%--document.getElementById("listForm").submit();--%>
-            <%--// form.action--%>
-            <%--// $ajax({--%>
-            <%--//--%>
-            <%--// })--%>
 
-        <%--}--%>
     </script>
 </head>
 <body>
 <h1></h1>
-<form id="listForm" method="post">
+<form id="listForm"  method="post">
     <table align="center" valign="center" border="1">
         <tr>
             <th>用户ID</th>
@@ -40,13 +28,13 @@
             <tr>
                 <td>${data.autoid}</td>
                 <td>${data.username}</td>
-                <%--<td><input type="button" value="修改" onclick="updateUser(${data.autoid});"/></td>--%>
-                <td><a href="/user/updateUsers?username=${data.username}">修改</a></td>
+                <td><input type="button" value="修改" onclick="updateUser(${data.autoid});"/></td>
+                <%--<td><a href="/user/updateJsp?autoid=${data.autoid}&username=${data.username}">修改</a></td>--%>
                <!-- <td><input type="button" value="删除"/></td>-->
                 <td><a href="/user/deleteUser?id=${data.autoid}">删除</a></td>
             </tr>
         </c:forEach>
-
+<a href="/user/addJsp" >增加</a>
     </table>
 
     <%--<td><form action="/user/updateUsers" method="post" value="修改" onclick="updateUser(${data.autoid});"></td>--%>

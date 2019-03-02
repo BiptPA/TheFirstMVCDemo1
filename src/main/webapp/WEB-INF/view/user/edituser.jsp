@@ -13,12 +13,13 @@
 <form action="/user/updateUsers" method="post">
     <fieldset>
         <legend>编辑用户</legend>
-        用户ID：<input type="text" name="auto_id" value="<%=request.getParameter("autoId")%>"><br>
+        用户ID：<input type="text" name="autoid" value="<%=request.getParameter("autoid")%>"/><br>
 
-        姓名：<input type="text" name="username" value="<%=request.getParameter("username")%>"><br>
+        修改姓名：<input type="text" name="username" value=""/><br>
 
 
-        <input type="button" value="修改" onclick="updateUser(<%=request.getParameter("autoId")%>,<%=request.getParameter("username")%>);">
+        <%--<input type="button" value="修改" onclick="updateUser(<%=request.getParameter("autoId")%>,<%=request.getParameter("username")%>);">--%>
+        <input type="submit" value="修改"/>
     </fieldset>
 </form>
 </body>
