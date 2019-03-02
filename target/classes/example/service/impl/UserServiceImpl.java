@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
+import java.io.Serializable;
 import java.util.List;
 @Component
 public class UserServiceImpl implements IUserService {
@@ -44,6 +45,13 @@ public class UserServiceImpl implements IUserService {
         edituser.setUsername(username);
         return userDao.updateUsers(edituser);
     }
+
+    @Override
+    public void deleteUser(Serializable id)
+    {
+        userDao.deleteUser(id);
+    }
+
 
     //下面是实现登陆的服务层代码；
     //自动注入iuserdao 用于访问数据库

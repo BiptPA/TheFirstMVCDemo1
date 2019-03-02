@@ -33,7 +33,10 @@
     set username = #{username,jdbcType=VARCHAR}
     where autoid = #{autoid,jdbcType=INTEGER}
     </update>
-
+<delete id="deleteUser" parameterType="example.pojo.User" >
+    delete from t_user
+    where autoid = #{autoid,jdbcType=INTEGER}
+  </delete>
     <!--<select id="selectByName" parameterType="string" resultType="User">-->
         <!--select * from user where username = #{username}-->
     <!--</select>-->

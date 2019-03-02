@@ -1,6 +1,5 @@
 package example.controller;
 import example.pojo.User;
-import example.pojo.Usertwo;
 import example.service.IUserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +38,7 @@ public class UserController {
         return null;
     }
 
-    @RequestMapping(value = "updateJsp", method = RequestMethod.GET)
+    @RequestMapping(value = "updateJsp", method = RequestMethod.POST)
     public String updateJsp(HttpServletRequest request) {
         String id = request.getParameter("autoid");
         //根据id查询用户信息
@@ -47,13 +46,20 @@ public class UserController {
        request.setAttribute("user", user);
        return "user/edituser";
     }
-    @RequestMapping(value = "updateUsers",method = RequestMethod.POST)
+    @RequestMapping(value = "updateUsers",method = RequestMethod.GET)
     public String updateUsers(HttpServletRequest request)
     {
         String id = request.getParameter("autoid");
         String username = request.getParameter("username");
         int updateuser = userService.update(id,username);
         return "user/edituser";
+    }
+
+    @RequestMapping("/deleteUser")
+    public String deleteUser(int id)
+    {
+        userService.deleteUser(id);
+        return "user/user";
     }
 
 

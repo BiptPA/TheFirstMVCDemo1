@@ -40,13 +40,15 @@
             <tr>
                 <td>${data.autoid}</td>
                 <td>${data.username}</td>
-                <td><input type="submit" value="修改"/></td>
-                <td><input type="button" value="删除"/></td>
+                <%--<td><input type="button" value="修改" onclick="updateUser(${data.autoid});"/></td>--%>
+                <td><a href="/user/updateUsers?username=${data.username}">修改</a></td>
+               <!-- <td><input type="button" value="删除"/></td>-->
+                <td><a href="/user/deleteUser?id=${data.autoid}">删除</a></td>
             </tr>
         </c:forEach>
 
     </table>
-    <%--<td><input type="button" value="修改" onclick="updateUser(${data.autoId});"></td>--%>
+
     <%--<td><form action="/user/updateUsers" method="post" value="修改" onclick="updateUser(${data.autoid});"></td>--%>
 </form>
 </body>
