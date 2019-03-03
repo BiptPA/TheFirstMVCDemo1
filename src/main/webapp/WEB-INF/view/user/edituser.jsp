@@ -17,10 +17,9 @@
 
         修改姓名：<input type="text" name="username" value=""/><br>
 
-
-        <%--<input type="button" value="修改" onclick="updateUser(<%=request.getParameter("autoId")%>,<%=request.getParameter("username")%>);">--%>
         <input type="submit" value="修改"/>
     </fieldset>
+    <%--<input type="button" value="修改" onclick="updateUser(<%=request.getParameter("autoId")%>,<%=request.getParameter("username")%>);">--%>
 </form>
 </body>
 </html>

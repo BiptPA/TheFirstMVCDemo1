@@ -29,14 +29,14 @@
                 <td>${data.autoid}</td>
                 <td>${data.username}</td>
                 <td><input type="button" value="修改" onclick="updateUser(${data.autoid});"/></td>
-                <%--<td><a href="/user/updateJsp?autoid=${data.autoid}&username=${data.username}">修改</a></td>--%>
-               <!-- <td><input type="button" value="删除"/></td>-->
                 <td><a href="/user/deleteUser?id=${data.autoid}">删除</a></td>
             </tr>
         </c:forEach>
 <a href="/user/addJsp" >增加</a>
     </table>
 
+    <%--<td><a href="/user/updateJsp?autoid=${data.autoid}&username=${data.username}">修改</a></td>--%>
+    <!-- <td><input type="button" value="删除"/></td>-->
     <%--<td><form action="/user/updateUsers" method="post" value="修改" onclick="updateUser(${data.autoid});"></td>--%>
 </form>
 </body>

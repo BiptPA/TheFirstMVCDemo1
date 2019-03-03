@@ -17,14 +17,14 @@ public class UserController {
 
     @Autowired
     private IUserService userService;
-
+//查
     @RequestMapping(value = "getUser", method = RequestMethod.GET)
     public String getUser(HttpServletRequest request) {
         List<User> users = userService.getAllUser();
         request.setAttribute("list", users);
         return "user/user";
     }
-
+//增
     @RequestMapping(value = "addJsp", method = RequestMethod.GET)
     public String addJsp(){
         return "user/adduser";
@@ -37,7 +37,7 @@ public class UserController {
         int adduser = userService.insertUser(username,password);
         return "redirect:/user/getUser";
     }
-
+//改
     @RequestMapping(value = "updateJsp", method = RequestMethod.POST)
     public String updateJsp(HttpServletRequest request) {
         String id = request.getParameter("autoid");
@@ -55,7 +55,7 @@ public class UserController {
         int updateuser = userService.update(id,username);
         return "redirect:/user/getUser";
     }
-
+//删
     @RequestMapping("/deleteUser")
     public String deleteUser(int id)
     {
