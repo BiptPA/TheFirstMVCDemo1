@@ -4,7 +4,6 @@ example\service\IResumeService.class
 example\dao\IUserDao.class
 example\dao\IResumeDao.class
 example\controller\ResumeselectController.class
-example\pojo\Usertwo.class
 example\controller\UserController.class
 example\pojo\Resume.class
 example\service\impl\UserServiceImpl.class

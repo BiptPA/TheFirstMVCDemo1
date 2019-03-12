@@ -1,6 +1,7 @@
 package example.pojo;
 
 public class Resume {
+
     public int getResumeid() {
         return resumeid;
     }
@@ -113,11 +114,11 @@ public class Resume {
         this.exsalary = exsalary;
     }
 
-    public int getPhonenum() {
+    public String getPhonenum() {
         return phonenum;
     }
 
-    public void setPhonenum(int phonenum) {
+    public void setPhonenum(String phonenum) {
         this.phonenum = phonenum;
     }
 
@@ -129,11 +130,11 @@ public class Resume {
         this.email = email;
     }
 
-    public int getQq() {
+    public String getQq() {
         return qq;
     }
 
-    public void setQq(int qq) {
+    public void setQq(String qq) {
         this.qq = qq;
     }
 
@@ -144,7 +145,8 @@ public class Resume {
     public void setNowaddress(String nowaddress) {
         this.nowaddress = nowaddress;
     }
-//[{"1111":1,"12":"12"},{}]
+
+    //[{"1111":1,"12":"12"},{}]
     private int resumeid;
     private int userid;
     private String realname;
@@ -159,9 +161,9 @@ public class Resume {
     private String workexp;
     private String positions;
     private String exsalary;
-    private int phonenum;
+    private String phonenum;
     private String email;
-    private int qq;
+    private String qq;
     private String nowaddress;
 
 

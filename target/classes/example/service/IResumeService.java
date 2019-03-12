@@ -6,4 +6,10 @@ import java.util.List;
 
 public interface IResumeService {
     List<Resume> getAllResume();
+
+    int insertResume(String realname,String idnum,String sex,String education,String school,String languages,String lanlevel,String comlevel,String major,String workexp,String positions,String exsalary,String phonenum,String email,String qq,String nowaddress);
+
+    void deleteresume(java.io.Serializable id);
+
+
 }
