@@ -1,10 +1,15 @@
-example\service\impl\ResumeService.class
+example\pojo\Position.class
+example\dao\IPositionDao.class
 example\service\IUserService.class
 example\service\IResumeService.class
 example\dao\IUserDao.class
+example\controller\PositionController.class
+example\service\impl\PositionServiceImpl.class
 example\dao\IResumeDao.class
-example\controller\ResumeselectController.class
+example\controller\ResumeController.class
+example\service\IPositionService.class
 example\controller\UserController.class
 example\pojo\Resume.class
+example\service\impl\ResumeServiceImpl.class
 example\service\impl\UserServiceImpl.class
 example\pojo\User.class

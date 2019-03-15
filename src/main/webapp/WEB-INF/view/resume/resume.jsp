@@ -8,16 +8,15 @@
     <title>Title</title>
     <script type="text/javascript">
         function updateResume(id) {
-            document.getElementById("listResume").action="/resume/updatereJsp?resumeid="+id;
-            document.getElementById("listResume").sumbit();
+            document.getElementById("listResume").action="/resume/updatereJsp?resumeid="+ id;
+            document.getElementById("listResume").submit();
         }
     </script>
-
 
 </head>
 <body>
 <div class="text" style=" text-align:center;"><h1>个人简历详情</h1></div>
-<form action="listResume" method="post">
+<form id="listResume" method="post">
 <table align="center" valign="center" border="1">
     <tr>
         <th>简历编号</th>
@@ -60,7 +59,6 @@
             <td>${resume.qq}</td>
             <td>${resume.nowaddress}</td>
             <td><input type="button" value="修改" onclick="updateResume(${resume.resumeid});"/></td>
-            <td><a href="/resume/updateresume?id=${resume.resumeid}">新修改</a></td>
             <td><a href="/resume/deleteresume?id=${resume.resumeid}">删除</a></td>
         </tr>
     </c:forEach>

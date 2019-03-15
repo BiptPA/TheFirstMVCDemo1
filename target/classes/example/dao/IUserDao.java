@@ -16,7 +16,7 @@ public interface IUserDao {
 
     int updateUsers(User edituser);
 
-    int updateEnable(@Param("caseId") String caseId);
+
 
     List<User> findUserById(@Param("autoid") String autoid);
 //    public User selectByName(String username);

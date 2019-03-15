@@ -36,13 +36,36 @@
         insert into t_resume(realname, idnum, sex, education, school, languages, lanlevel,comlevel, major, workexp, positions, exsalary, phonenum, email, qq, nowaddress)
         values (#{realname,jdbcType=VARCHAR},#{idnum,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR},#{education,jdbcType=VARCHAR},#{school,jdbcType=VARCHAR},#{languages,jdbcType=VARCHAR},#{lanlevel,jdbcType=VARCHAR},#{comlevel,jdbcType=VARCHAR},#{major,jdbcType=VARCHAR},#{workexp,jdbcType=VARCHAR},#{positions,jdbcType=VARCHAR},#{exsalary,jdbcType=VARCHAR},#{phonenum,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR},#{qq,jdbcType=VARCHAR},#{nowaddress,jdbcType=VARCHAR})
     </insert>
-<delete id="deleteresume" parameterType="example.pojo.Resume">
-    delete from t_resume
-    where resumeid = #{resumeid,jdbcType=INTEGER}
-</delete>
-
-
-
+    <select id="findResumeById" resultMap="BaseResultMap">
+      select
+        <include refid="Base_Column_List"/>
+      from t_resume
+      where resumeid=#{resumeid,jdbcType=INTEGER}
+    </select>
+    <update id="updater" parameterType="example.pojo.Resume">
+        update t_resume
+        set realname = #{realname,jdbcType=VARCHAR},
+        idnum = #{idnum,jdbcType=VARCHAR},
+        sex = #{sex,jdbcType=VARCHAR},
+        education = #{education,jdbcType=VARCHAR},
+        school = #{school,jdbcType=VARCHAR},
+        languages = #{languages,jdbcType=VARCHAR},
+        lanlevel = #{lanlevel,jdbcType=VARCHAR},
+        comlevel = #{comlevel,jdbcType=VARCHAR},
+        major = #{major,jdbcType=VARCHAR},
+        workexp = #{workexp,jdbcType=VARCHAR},
+        positions = #{positions,jdbcType=VARCHAR},
+        exsalary = #{exsalary,jdbcType=VARCHAR},
+        phonenum = #{phonenum,jdbcType=VARCHAR},
+        email = #{email,jdbcType=VARCHAR},
+        qq = #{qq,jdbcType=VARCHAR},
+        nowaddress = #{nowaddress,jdbcType=VARCHAR}
+        where resumeid = #{resumeid,jdbcType=INTEGER}
+    </update>
+    <delete id="deleteresume" parameterType="example.pojo.Resume">
+        delete from t_resume
+        where resumeid = #{resumeid,jdbcType=INTEGER}
+    </delete>
     <!--<select id="getAllResumes" parameterType="string" resultType="User">-->
     <!--select * from t_resume where resumeid = #{resumeid}-->
     <!--</select>-->

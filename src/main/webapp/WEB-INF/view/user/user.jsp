@@ -7,8 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <title>Title</title>
     <script type="text/javascript">
-            function updateUser(id) {
-                document.getElementById("listForm").action = "/user/updateJsp?autoid="+ id;
+            function updateUser(id,username) {
+                document.getElementById("listForm").action = "/user/updateJsp?autoid="+ id+"username="+ username;
                 document.getElementById("listForm").submit();
 
             }

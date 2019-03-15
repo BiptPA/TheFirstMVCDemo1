@@ -4,7 +4,7 @@
 <head>
     <script type="text/javascript">
         function updateUser(id,username) {
-            document.getElementById("listForm").action = "/user/updateUsers?autoid="+ id+"username="+username;
+            document.getElementById("listForm").action = "/user/updateUsers?autoid="+ id+"username="+ username;
             document.getElementById("listForm").submit();}
     </script>
     <title>Title</title>
@@ -15,7 +15,7 @@
         <legend>编辑用户</legend>
         用户ID：<input type="text" name="autoid" value="<%=request.getParameter("autoid")%>"/><br>
 
-        修改姓名：<input type="text" name="username" value=""/><br>
+        修改姓名：<input type="text" name="username" value="<%=request.getParameter("username")%>"/><br>
 
         <input type="submit" value="修改"/>
     </fieldset>

@@ -14,10 +14,12 @@ public interface IResumeDao {
 
     List<Resume> findResumeById(@Param("resumeid") String resumeid);
 
+    int updater(Resume resume);
+
     void deleteresume(java.io.Serializable id);
 
 
 
-    void updateresume(java.io.Serializable id);
+
 }
 

@@ -46,6 +46,7 @@ public class UserController {
        request.setAttribute("user", user);
        return "user/edituser";
     }
+
     @RequestMapping(value = "updateUsers",method = RequestMethod.POST)
     public String updateUsers(HttpServletRequest request)
     {
@@ -55,6 +56,7 @@ public class UserController {
         int updateuser = userService.update(id,username);
         return "redirect:/user/getUser";
     }
+
 //删
     @RequestMapping("/deleteUser")
     public String deleteUser(int id)
