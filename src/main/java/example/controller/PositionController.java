@@ -16,11 +16,22 @@ import java.util.List;
 public class PositionController {
     @Autowired
     private IPositionService positionService;
+
     @RequestMapping(value = "getPosition" , method = RequestMethod.GET)
-    public String getPosition(HttpServletRequest request){
+    public String getPosition(HttpServletRequest request) {
         List<Position> positions = positionService.getAllPosition();
-        request.setAttribute("positions" ,positions);
+        request.setAttribute("positions", positions);
         return "position/position";
+    }
+
+    //单个查询
+     @RequestMapping(value = "getPersonPosition",method = RequestMethod.GET)
+     public String getPersonPosition(HttpServletRequest request){
+        List<Position> personposition = positionService.getPersonPosition();
+        request.setAttribute("personposition",personposition);
+        return "position/personposition";
+
+
     }
     //增
     @RequestMapping(value = "addPositionJsp",method = RequestMethod.GET)

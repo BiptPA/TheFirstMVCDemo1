@@ -26,6 +26,13 @@
         from t_position
     </select>
 
+    <select id="getPersonPositions" parameterType="example.pojo.Position" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_position
+        where positionid=#{positionid,jdbcType=INTEGER}
+    </select>
+
     <insert id="insertPositions" parameterType="example.pojo.Position">
         insert into t_position(positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc, company, comdes)
         values (#{positions,jdbcType=VARCHAR},#{postype,jdbcType=VARCHAR},#{posdate,jdbcType=VARCHAR},#{posnum,jdbcType=VARCHAR},#{posdes,jdbcType=VARCHAR},#{posreq,jdbcType=VARCHAR},#{possal,jdbcType=VARCHAR},#{posphone,jdbcType=VARCHAR},#{posloc,jdbcType=VARCHAR},#{company,jdbcType=VARCHAR},#{comdes,jdbcType=VARCHAR})

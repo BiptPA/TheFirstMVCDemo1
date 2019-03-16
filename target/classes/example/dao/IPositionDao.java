@@ -8,6 +8,8 @@ import java.util.List;
 public interface IPositionDao {
     List<Position> getAllPositions();
 
+    List<Position> getPersonPositions();
+
     int insertPositions(Position position);
 
     List<Position> findPositionById(@Param("positionid") String positionid);

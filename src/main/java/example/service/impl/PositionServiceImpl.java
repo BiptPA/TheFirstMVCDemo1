@@ -20,6 +20,11 @@ public class PositionServiceImpl implements IPositionService {
         return positionDao.getAllPositions();
     }
 
+    @Override
+    public  List<Position> getPersonPosition(){
+        return positionDao.getPersonPositions();
+    }
+
 
     @Override
     public int insertPosition(String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc,String company,String comdes){
