@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf8"
          pageEncoding="utf8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -33,26 +33,26 @@
             <th>公司名称</th>
             <th>公司描述</th>
         </tr>
-        <c:forEach items="${personposition}" var="po">
+        <%--<c:forEach items="${personposition}" var="po">--%>
             <tr>
-                <td>${po.positionid}</td>
-                <td>${per.userid}</td>
-                <td>${per.positions}</td>
-                <td>${per.postype}</td>
-                <td>${per.posdate}</td>
-                <td>${per.posnum}</td>
-                <td>${per.posdes}</td>
-                <td>${per.posreq}</td>
-                <td>${per.possal}</td>
-                <td>${per.posphone}</td>
-                <td>${per.posloc}</td>
-                <td>${per.company}</td>
-                <td>${per.comdes}</td>
+                <td>${personposition.positionid}</td>
+                <td>${personposition.userid}</td>
+                <td>${personposition.positions}</td>
+                <td>${personposition.postype}</td>
+                <td>${personposition.posdate}</td>
+                <td>${personposition.posnum}</td>
+                <td>${personposition.posdes}</td>
+                <td>${personposition.posreq}</td>
+                <td>${personposition.possal}</td>
+                <td>${personposition.posphone}</td>
+                <td>${personposition.posloc}</td>
+                <td>${personposition.company}</td>
+                <td>${personposition.comdes}</td>
                 <%--<td><a href="/position/getPosition">职位详情</a></td>--%>
                 <%--<td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>--%>
                 <%--<td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>--%>
             </tr>
-        </c:forEach>
+        <%--</c:forEach>--%>
         <div>
             <a href="/position/addPositionJsp">新增职位</a>
 

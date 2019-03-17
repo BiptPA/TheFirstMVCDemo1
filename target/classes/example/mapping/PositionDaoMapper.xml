@@ -30,7 +30,7 @@
         select
         <include refid="Base_Column_List" />
         from t_position
-        where positionid=#{positionid,jdbcType=INTEGER}
+
     </select>
 
     <insert id="insertPositions" parameterType="example.pojo.Position">

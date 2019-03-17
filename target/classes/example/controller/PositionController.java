@@ -28,7 +28,7 @@ public class PositionController {
      @RequestMapping(value = "getPersonPosition",method = RequestMethod.GET)
      public String getPersonPosition(HttpServletRequest request){
         List<Position> personposition = positionService.getPersonPosition();
-        request.setAttribute("personposition",personposition);
+        request.setAttribute("personposition",personposition.get(0));
         return "position/personposition";
 
 
