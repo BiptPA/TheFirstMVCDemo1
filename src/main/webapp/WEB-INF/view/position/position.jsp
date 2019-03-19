@@ -15,13 +15,15 @@
 
 </head>
 <body>
-<div class="text" style=" text-align:center;"><h1>职位</h1></div>
+<div class="text" style=" text-align:center;"><h1>所有职位</h1></div>
 <form id="listPosition" method="post">
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>
             <th>用户编号</th>
             <th>职位</th>
+            <th>职位详情<th>
+            <%--<th>修改操作</th>--%>
             <%--<th>职位类型</th>--%>
             <%--<th>发布时间</th>--%>
             <%--<th>职位数量</th>--%>
@@ -48,9 +50,9 @@
                 <%--<td>${p.posloc}</td>--%>
                 <%--<td>${p.company}</td>--%>
                 <%--<td>${p.comdes}</td>--%>
-                <td><a href="/position/getPersonPosition">职位详情</a></td>
-                <td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>
-                <td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>
+                <td><a href="/position/getPersonPosition?positionid=${p.positionid}">职位详情</a></td>
+                <%--<td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>--%>
+                <%--<td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>--%>
             </tr>
         </c:forEach>
         <div>

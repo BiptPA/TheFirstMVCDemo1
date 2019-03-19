@@ -18,7 +18,7 @@ public class ResumeController {
 
     @Autowired
     private IResumeService resumeService;
-
+//查旬全部简历
     @RequestMapping(value = "getResume", method = RequestMethod.GET)
     public String getResume(HttpServletRequest request) {
         List<Resume> re = resumeService.getAllResume();
@@ -26,6 +26,18 @@ public class ResumeController {
         return "resume/resume";
     }
 
+    @RequestMapping(value = "getOneResume",method = RequestMethod.GET)
+    public String getOneResume(HttpServletRequest request){
+        List<Resume> oneresume = resumeService.getAllResume();
+        request.setAttribute("oneresume",oneresume);
+        return "resume/chooseresume";
+    }
+
+
+
+
+
+//添加简历
     @RequestMapping(value = "addreJsp",method = RequestMethod.GET)
     public String addreJsp(){
         return "resume/addresume";
@@ -52,6 +64,8 @@ public class ResumeController {
         return "redirect:/resume/getResume";
     }
 
+
+    //修改简历
     @RequestMapping(value = "/updatereJsp",method = RequestMethod.POST)
     public String updatereJsp(HttpServletRequest request) {
         String id = request.getParameter("resumeid");
@@ -87,7 +101,7 @@ public class ResumeController {
     }
 
 
-
+//删除简历
 @RequestMapping("/deleteresume")
     public String deleteresume(int id)
 {

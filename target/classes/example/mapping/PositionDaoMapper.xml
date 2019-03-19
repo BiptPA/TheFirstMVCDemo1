@@ -26,6 +26,13 @@
         from t_position
     </select>
 
+    <select id="selectByPrimaryKey" parameterType="String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_position
+        where positionid=#{positionid,jdbcType=INTEGER}
+    </select>
+
     <select id="getPersonPositions" parameterType="example.pojo.Position" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />

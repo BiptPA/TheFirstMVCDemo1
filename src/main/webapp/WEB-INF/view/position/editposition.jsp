@@ -22,7 +22,7 @@
 
         职位类型：<input type="text" name="postype" value="${position.postype}"/><br>
 
-        发布时间：<input type="text" name="posdate" value="${position.posdate}"/><br>
+        发布时间：<input type="date" name="posdate" value="${position.posdate}"/><br>
 
         职位数量：<input type="text" name="posnum" value="${position.posnum}"/><br>
 

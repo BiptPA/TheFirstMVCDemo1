@@ -8,7 +8,9 @@ import java.util.List;
 public interface IPositionDao {
     List<Position> getAllPositions();
 
-    List<Position> getPersonPositions();
+//    List<Position> getPersonPositions();
+
+    Position selectByPrimaryKey(String positionid);
 
     int insertPositions(Position position);
 

@@ -8,7 +8,8 @@ public interface IPositionService {
 
     List<Position> getAllPosition();
 
-    List<Position> getPersonPosition();
+//    List<Position> getPersonPosition();
+    Position getperPositionById(String positionid);
 
     int insertPosition(String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc,String company,String comdes);
 

@@ -10,7 +10,7 @@
 
         职位名称：<input type="text" name="positions"><br>
         职位类型：<input type="text" name="postype"><br>
-        发布时间：<input type="text" name="posdate"><br>
+        发布时间：<input type="date" name="posdate"><br>
         职位数量：<input type="text" name="posnum"><br>
         职位描述：<input type="text" name="posdes"><br>
         职位要求：<input type="text" name="posreq"><br>

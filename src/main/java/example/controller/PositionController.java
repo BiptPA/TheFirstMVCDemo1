@@ -27,8 +27,12 @@ public class PositionController {
     //单个查询
      @RequestMapping(value = "getPersonPosition",method = RequestMethod.GET)
      public String getPersonPosition(HttpServletRequest request){
-        List<Position> personposition = positionService.getPersonPosition();
-        request.setAttribute("personposition",personposition.get(0));
+        String positionid = request.getParameter("positionid");
+        Position position = positionService.getperPositionById(positionid);
+        System.out.println("控制器单个查询传的id是："+positionid);
+         request.setAttribute("perposition",position);
+//        List<Position> personposition = positionService.getPersonPosition();
+//        request.setAttribute("personposition",personposition.get(0));
         return "position/personposition";
 
 
@@ -38,6 +42,7 @@ public class PositionController {
     public String addPositionJsp() {
         return "position/addposition";
     }
+
     @RequestMapping(value = "addPosition",method = RequestMethod.POST)
     public String addPosition(HttpServletRequest request){
         String positions = request.getParameter("positions");

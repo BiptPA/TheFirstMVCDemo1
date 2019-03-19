@@ -17,7 +17,6 @@ public interface IUserDao {
     int updateUsers(User edituser);
 
 
-
     List<User> findUserById(@Param("autoid") String autoid);
 //    public User selectByName(String username);
 
