@@ -34,8 +34,18 @@ public class Deliveryrecord {
         this.positionid = positionid;
     }
 
+    public String getAcceptorrefuse() {
+        return acceptorrefuse;
+    }
+
+    public void setAcceptorrefuse(String acceptorrefuse) {
+        this.acceptorrefuse = acceptorrefuse;
+    }
+
+
     private int deliverid;
     private int userid;
     private int resumeid;
     private int positionid;
+    private String acceptorrefuse;
 }

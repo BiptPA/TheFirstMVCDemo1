@@ -6,6 +6,7 @@
         <result column="userid" jdbcType="INTEGER" property="userid" />
         <result column="positionid" jdbcType="INTEGER" property="positionid" />
         <result column="resumeid" jdbcType="INTEGER" property="resumeid" />
+        <result column="acceptorrefuse" jdbcType="VARCHAR" property="acceptorrefuse" />
     </resultMap>
 
     <insert id="adddeliveryrecords" parameterType="example.pojo.Deliveryrecord">

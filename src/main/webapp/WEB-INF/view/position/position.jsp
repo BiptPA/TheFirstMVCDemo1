@@ -6,12 +6,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <title>Title</title>
-    <script type="text/javascript">
-        function updatePosition(id) {
-            document.getElementById("listPosition").action="/position/updatepositionJsp?positionid="+ id;
-            document.getElementById("listPosition").submit();
-        }
-    </script>
+    <%--<script type="text/javascript">--%>
+        <%--function updatePosition(id) {--%>
+            <%--document.getElementById("listPosition").action="/position/updatepositionJsp?positionid="+ id;--%>
+            <%--document.getElementById("listPosition").submit();--%>
+        <%--}--%>
+    <%--</script>--%>
 
 </head>
 <body>

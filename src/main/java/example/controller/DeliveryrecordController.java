@@ -23,7 +23,7 @@ public class DeliveryrecordController {
         String positionid = request.getParameter("positionid");
         String resumeid = request.getParameter("resumeid");
         String userid= request.getParameter("userid");
-        System.out.println(positionid+" "+resumeid+" "+userid);
+       // System.out.println(positionid+" "+resumeid+" "+userid);
         deliveryrecordService.adddeliveryrecord(positionid,resumeid,userid);
         return "deliveryrecord/addSuccess";
     }

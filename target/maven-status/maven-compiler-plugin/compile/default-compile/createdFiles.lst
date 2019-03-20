@@ -1,3 +1,4 @@
+example\dao\ICompanyDao.class
 example\pojo\Position.class
 example\service\IUserService.class
 example\dao\IUserDao.class
@@ -9,8 +10,11 @@ example\service\IPositionService.class
 example\controller\UserController.class
 example\pojo\Resume.class
 example\service\impl\UserServiceImpl.class
+example\service\ICompanyService.class
+example\controller\CompanyController.class
 example\controller\DeliveryrecordController.class
 example\dao\IPositionDao.class
+example\service\impl\CompanyServiceImpl.class
 example\service\IResumeService.class
 example\dao\IDeliveryDao.class
 example\service\impl\DeliveryrecordServiceImpl.class

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-19 21:20:43
+Date: 2019-03-20 15:24:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,22 +24,24 @@ CREATE TABLE `t_deliveryrecord` (
   `userid` int(11) DEFAULT NULL,
   `positionid` int(11) DEFAULT NULL,
   `resumeid` int(11) DEFAULT NULL,
+  `acceptorrefuse` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`deliverid`),
   KEY `userid` (`userid`),
   KEY `positionid` (`positionid`),
   KEY `resumeid` (`resumeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_deliveryrecord
 -- ----------------------------
-INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '3', '5');
-INSERT INTO `t_deliveryrecord` VALUES ('2', '2', '3', '5');
-INSERT INTO `t_deliveryrecord` VALUES ('3', '2', '3', '7');
-INSERT INTO `t_deliveryrecord` VALUES ('4', '2', '2', '5');
-INSERT INTO `t_deliveryrecord` VALUES ('5', '2', '2', '7');
-INSERT INTO `t_deliveryrecord` VALUES ('6', '2', '1', '5');
-INSERT INTO `t_deliveryrecord` VALUES ('7', '2', '1', '5');
+INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '3', '5', null);
+INSERT INTO `t_deliveryrecord` VALUES ('2', '2', '3', '5', null);
+INSERT INTO `t_deliveryrecord` VALUES ('3', '2', '3', '7', null);
+INSERT INTO `t_deliveryrecord` VALUES ('4', '2', '2', '5', null);
+INSERT INTO `t_deliveryrecord` VALUES ('5', '2', '2', '7', null);
+INSERT INTO `t_deliveryrecord` VALUES ('6', '2', '1', '5', null);
+INSERT INTO `t_deliveryrecord` VALUES ('7', '2', '1', '5', null);
+INSERT INTO `t_deliveryrecord` VALUES ('8', '2', '2', '7', null);
 
 -- ----------------------------
 -- Table structure for t_position
