@@ -8,4 +8,6 @@ public interface ICompanyDao {
 
     List<Position> getAlljob();
 
+    List<String> getAllinformation();
+
 }

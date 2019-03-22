@@ -28,5 +28,12 @@
 
     </select>
 
+    <!--<select id="getAllinformation" parameterType="example.pojo.Position">-->
+
+
+    <!--</select>-->
+
+
+
 
 </mapper>

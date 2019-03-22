@@ -18,7 +18,7 @@
 
 <%--company=<%=request.getParameter("company")%>--%>
 <%--<form id="listPosition" method="post">--%>
-<p><div class="text" style=" text-align:center;"><h1>公司名：${company}</h1></div></p>
+<p><div class="text" style=" text-align:center;"><h1>公司名：company=${company}</h1></div></p>
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>

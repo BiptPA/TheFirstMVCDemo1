@@ -17,4 +17,12 @@ public class CompanyServiceImpl implements ICompanyService {
         return companyDao.getAlljob();
     }
 
+    @Override
+    public List<String> getAllinfor(){
+        return companyDao.getAllinformation();
+    }
+
+
+
+
 }

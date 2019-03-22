@@ -1,6 +1,7 @@
 package example.controller;
 
 import example.pojo.Position;
+import example.pojo.Resume;
 import example.service.ICompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +23,16 @@ public class CompanyController {
         List<Position> company = companyService.getAllpositions();
         request.setAttribute("company",company);
         return "company/company";
-
         }
+
+
+    @RequestMapping(value = "getCompanyDetail",method = RequestMethod.GET)
+        public String getCompanyDetail(HttpServletRequest request){
+        List<String> manage = companyService.getAllinfor();
+        request.setAttribute("manage",manage);
+        return "company/companydetail";
+    }
+
+
 
 }
