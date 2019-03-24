@@ -1,5 +1,6 @@
 package example.controller;
 
+import example.pojo.DeliverDetail;
 import example.pojo.Position;
 import example.pojo.Resume;
 import example.service.ICompanyService;
@@ -28,7 +29,7 @@ public class CompanyController {
 
     @RequestMapping(value = "getCompanyDetail",method = RequestMethod.GET)
         public String getCompanyDetail(HttpServletRequest request){
-        List<String> manage = companyService.getAllinfor();
+        List<DeliverDetail> manage = companyService.getAllinfor();
         request.setAttribute("manage",manage);
         return "company/companydetail";
     }

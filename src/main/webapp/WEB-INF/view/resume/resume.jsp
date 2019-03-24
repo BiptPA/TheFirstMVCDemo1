@@ -64,8 +64,7 @@
     </c:forEach>
     <div>
         <a href="/resume/addreJsp">新增简历</a>
-        <%--<a href="/user/getUser">修改简历</a>--%>
-        <%--<a href="/user/getUser">删除简历</a>--%>
+
     </div>
 </table>
 </form>

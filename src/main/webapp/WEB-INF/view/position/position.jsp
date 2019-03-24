@@ -6,12 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <title>Title</title>
-    <%--<script type="text/javascript">--%>
-        <%--function updatePosition(id) {--%>
-            <%--document.getElementById("listPosition").action="/position/updatepositionJsp?positionid="+ id;--%>
-            <%--document.getElementById("listPosition").submit();--%>
-        <%--}--%>
-    <%--</script>--%>
+
 
 </head>
 <body>
@@ -51,8 +46,6 @@
                 <%--<td>${p.company}</td>--%>
                 <%--<td>${p.comdes}</td>--%>
                 <td><a href="/position/getPersonPosition?positionid=${p.positionid}">职位详情</a></td>
-                <%--<td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>--%>
-                <%--<td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>--%>
             </tr>
         </c:forEach>
         <div>

@@ -24,9 +24,6 @@
         电子邮件：<input type="text" name="email"><br>
         QQ：<input type="text" name="qq"><br>
         现住址：<input type="text" name="nowaddress"><br>
-        <%--说明：<textarea>--%>
-
-        <%--</textarea>>--%>
         <input type="submit" value="确认增加">
 
     </fieldset>

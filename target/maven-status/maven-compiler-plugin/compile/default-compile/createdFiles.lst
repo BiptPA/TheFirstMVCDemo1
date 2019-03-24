@@ -20,5 +20,6 @@ example\dao\IDeliveryDao.class
 example\service\impl\DeliveryrecordServiceImpl.class
 example\service\IDeliveryrecordService.class
 example\controller\ResumeController.class
+example\pojo\DeliverDetail.class
 example\service\impl\ResumeServiceImpl.class
 example\pojo\User.class

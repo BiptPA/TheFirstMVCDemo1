@@ -1,6 +1,7 @@
 package example.service.impl;
 
 import example.dao.ICompanyDao;
+import example.pojo.DeliverDetail;
 import example.pojo.Position;
 import example.service.ICompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +17,13 @@ public class CompanyServiceImpl implements ICompanyService {
     public List<Position> getAllpositions(){
         return companyDao.getAlljob();
     }
+
+    @Override
+    public List<DeliverDetail> getAllinfor(){
+        return companyDao.getAllinformation();
+    }
+
+
+
 
 }
