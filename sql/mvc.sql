@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-20 15:24:29
+Date: 2019-03-24 20:26:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -119,6 +119,7 @@ CREATE TABLE `t_role` (
 -- ----------------------------
 -- Records of t_role
 -- ----------------------------
+INSERT INTO `t_role` VALUES ('1', '1', '1');
 
 -- ----------------------------
 -- Table structure for t_user
@@ -158,8 +159,9 @@ CREATE TABLE `t_users` (
   PRIMARY KEY (`userid`),
   KEY `roleid` (`roleid`),
   CONSTRAINT `t_users_ibfk_1` FOREIGN KEY (`roleid`) REFERENCES `t_role` (`roleid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_users
 -- ----------------------------
+INSERT INTO `t_users` VALUES ('2', 'sd', 'asdas', '1');

@@ -48,7 +48,7 @@
         <th>现住址</th>
         <th>投递结果</th>
     </tr>
-    <c:forEach items="${company}" var="p">
+    <c:forEach items="${manage}" var="p">
         <tr>
                 <td>${p.positionid}</td>
                 <td>${p.userid}</td>
