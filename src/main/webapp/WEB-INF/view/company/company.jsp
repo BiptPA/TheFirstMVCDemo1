@@ -33,9 +33,9 @@
         </tr>
         <c:forEach items="${company}" var="c">
             <tr>
-                <td>${c.positionid}</td>
-                <td>${c.userid}</td>
-                <td>${c.positions}</td>
+                    <td>${c.positionid}</td>
+                    <td>${c.userid}</td>
+                    <td>${c.positions}</td>
                     <%--<td>${p.postype}</td>--%>
                     <%--<td>${p.posdate}</td>--%>
                     <%--<td>${p.posnum}</td>--%>
@@ -46,15 +46,13 @@
                     <%--<td>${p.posloc}</td>--%>
                     <%--<td>${p.company}</td>--%>
                     <%--<td>${p.comdes}</td>--%>
-                <td><a href="/company/getCompanyDetail?positionid=${c.positionid}">投递详情</a></td>
+                    <td><a href="/company/getCompanyDetail?positionid=${c.positionid}">投递详情</a></td>
+                    <%--?positionid=${c.positionid}--%>
                     <%--<td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>--%>
                     <%--<td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>--%>
             </tr>
         </c:forEach>
-        <%--<div>--%>
-            <%--<a href="/position/addPositionJsp" >新增职位</a>--%>
 
-        <%--</div>--%>
     </table>
 </form>
 </body>

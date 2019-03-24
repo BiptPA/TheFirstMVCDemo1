@@ -3,6 +3,6 @@
 <mapper namespace="example.dao.ICompanyDao">
 
     <select id="getAllinformation" parameterType="String" resultType="example.pojo.DeliverDetail">
-        SELECT company from t_resume a join t_position b on a.positions=b.positions join t_deliveryrecord c on a.userid=c.userid where a.userid=#{a.userid,jdbcType=INTEGER} and a.resumeid=#{a.userid,jdbcType=INTEGER} and b.positionid=#{b.position,jdbcType=INTEGER}
+        SELECT * from t_resume a join t_position b on a.positions=b.positions join t_deliveryrecord c on a.userid=c.userid where a.userid=#{userid,jdbcType=INTEGER} and a.resumeid=#{resumeid,jdbcType=INTEGER} and b.positionid=#{positionid,jdbcType=INTEGER}
     </select>
 </mapper>
