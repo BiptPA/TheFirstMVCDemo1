@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.dao.IDeliveryDao">
+    <resultMap id="BaseResultMap" type="example.pojo.Deliveryrecord">
+        <id column="deliverid" jdbcType="INTEGER" property="deliverid" />
+        <result column="userid" jdbcType="INTEGER" property="userid" />
+        <result column="positionid" jdbcType="INTEGER" property="positionid" />
+        <result column="resumeid" jdbcType="INTEGER" property="resumeid" />
+        <result column="acceptorrefuse" jdbcType="VARCHAR" property="acceptorrefuse" />
+    </resultMap>
+
+    <insert id="adddeliveryrecords" parameterType="example.pojo.Deliveryrecord">
+        insert into t_deliveryrecord(userid,positionid,resumeid)
+        values (#{userid,jdbcType=INTEGER},#{positionid,jdbcType=INTEGER},#{resumeid,jdbcType=INTEGER})
+    </insert>
+
+</mapper>
