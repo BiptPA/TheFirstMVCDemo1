@@ -19,4 +19,11 @@ public interface IPositionDao {
     int updateposition(Position posi);
 
     void deletePosition(java.io.Serializable id);
+
+    /**
+     * 根据公司ID获取全部职位信息
+     * @param companyId
+     * @return
+     */
+    List<Position> findPositionByCompanyId(@Param("companyId") String companyId);
 }

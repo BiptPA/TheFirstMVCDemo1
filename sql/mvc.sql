@@ -10,10 +10,29 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-24 20:26:18
+Date: 2019-03-25 17:21:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for t_company
+-- ----------------------------
+DROP TABLE IF EXISTS `t_company`;
+CREATE TABLE `t_company` (
+  `auto_id` int(11) NOT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `company_dscp` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `tel` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`auto_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_company
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for t_deliveryrecord
@@ -44,12 +63,50 @@ INSERT INTO `t_deliveryrecord` VALUES ('7', '2', '1', '5', null);
 INSERT INTO `t_deliveryrecord` VALUES ('8', '2', '2', '7', null);
 
 -- ----------------------------
+-- Table structure for t_employ
+-- ----------------------------
+DROP TABLE IF EXISTS `t_employ`;
+CREATE TABLE `t_employ` (
+  `auto_id` int(11) NOT NULL AUTO_INCREMENT,
+  `real_name` varchar(200) DEFAULT NULL,
+  `sex` varchar(200) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `account` varchar(200) DEFAULT NULL,
+  `pwd` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`auto_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_employ
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for t_employer
+-- ----------------------------
+DROP TABLE IF EXISTS `t_employer`;
+CREATE TABLE `t_employer` (
+  `auto_id` int(11) NOT NULL AUTO_INCREMENT,
+  `company_id` varchar(200) DEFAULT NULL,
+  `company_name` varchar(200) DEFAULT NULL,
+  `employer_name` varchar(200) DEFAULT NULL,
+  `employer_pwd` varchar(200) DEFAULT NULL,
+  `employer_address` varchar(200) DEFAULT NULL,
+  `employer_tel` varchar(200) DEFAULT NULL,
+  `employer_email` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`auto_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_employer
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for t_position
 -- ----------------------------
 DROP TABLE IF EXISTS `t_position`;
 CREATE TABLE `t_position` (
   `positionid` int(11) NOT NULL AUTO_INCREMENT,
-  `userid` int(11) NOT NULL DEFAULT '2',
+  `company_id` varchar(200) DEFAULT '2',
   `positions` varchar(255) DEFAULT NULL,
   `postype` varchar(255) DEFAULT NULL,
   `posdate` varchar(255) DEFAULT NULL,
@@ -59,10 +116,10 @@ CREATE TABLE `t_position` (
   `possal` varchar(255) DEFAULT NULL,
   `posphone` varchar(255) DEFAULT NULL,
   `posloc` varchar(255) DEFAULT NULL,
-  `company` varchar(255) DEFAULT NULL,
+  `companyName` varchar(255) DEFAULT NULL,
   `comdes` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`positionid`),
-  KEY `userid` (`userid`)
+  KEY `userid` (`company_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -120,32 +177,6 @@ CREATE TABLE `t_role` (
 -- Records of t_role
 -- ----------------------------
 INSERT INTO `t_role` VALUES ('1', '1', '1');
-
--- ----------------------------
--- Table structure for t_user
--- ----------------------------
-DROP TABLE IF EXISTS `t_user`;
-CREATE TABLE `t_user` (
-  `autoid` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`autoid`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of t_user
--- ----------------------------
-INSERT INTO `t_user` VALUES ('23', '吴少轩', '123456');
-INSERT INTO `t_user` VALUES ('28', '李卓', '129521');
-INSERT INTO `t_user` VALUES ('29', '傻博', '23');
-INSERT INTO `t_user` VALUES ('30', 'xudong', '3');
-INSERT INTO `t_user` VALUES ('36', 'wenyan', '123456');
-INSERT INTO `t_user` VALUES ('37', 'wanyu', '9839953');
-INSERT INTO `t_user` VALUES ('39', 'zhaofengfeng', '2143424352');
-INSERT INTO `t_user` VALUES ('40', '贾志', '33466-4');
-INSERT INTO `t_user` VALUES ('41', '王健成', '3252346');
-INSERT INTO `t_user` VALUES ('42', '薛天杰', '54737');
-INSERT INTO `t_user` VALUES ('43', '刘阔', '2334262');
 
 -- ----------------------------
 -- Table structure for t_users

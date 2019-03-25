@@ -1,13 +1,16 @@
 package example.service;
 
-import example.pojo.DeliverDetail;
-import example.pojo.Position;
-
-import java.util.List;
+import example.dto.CompanyDto;
 
 public interface ICompanyService {
 
-    List<Position> getAllpositions();
+    /**
+     * 获取当前登录HR的公司信息
+     * @return
+     */
+    CompanyDto getCompany(String empolyerName);
 
-    List<DeliverDetail> getAllinfor();
+//    String getAllpositions();
+//
+//    List<DeliverDetail> getAllinfor();
 }

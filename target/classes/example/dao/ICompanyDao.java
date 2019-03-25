@@ -1,14 +1,15 @@
 package example.dao;
 
-import example.pojo.DeliverDetail;
-import example.pojo.Position;
-
-import java.util.List;
+import example.pojo.Company;
+import org.apache.ibatis.annotations.Param;
 
 public interface ICompanyDao {
 
-    List<Position> getAlljob();
 
-    List<DeliverDetail> getAllinformation();
-
+    /**
+     * 根据登录HR获取公司信息
+     * @param companyId
+     * @return
+     */
+    Company findCompanyById(@Param("companyId") String companyId);
 }

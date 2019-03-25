@@ -14,7 +14,7 @@
             body{text-align:left; line-height:22px}
         </style>
         <body>
-                <h2>公司名称：${perposition.company}</h2>
+                <h2>公司名称：${perposition.companyName}</h2>
                 <h1>职位名称：${perposition.positions}</h1>
                 <h3>发布时间：${perposition.posdate}</h3>
                 <h3>职位类型：${perposition.postype}</h3>
@@ -24,7 +24,7 @@
                 <h3>薪   资：${perposition.possal}</h3>
                 <h3>联系电话：${perposition.posphone}</h3>
                 <h3>公司描述：${perposition.comdes}</h3>
-                <h3>工作地点：${perposition.company}</h3>
+                <h3>工作地点：${perposition.posloc}</h3>
         </body>
 
 <a href="/resume/getOneResume?positionid=${perposition.positionid}">投简历</a>

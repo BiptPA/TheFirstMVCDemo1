@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="example.dao.ICompanyDao">
-
-    <select id="getAllinformation" parameterType="String" resultType="example.pojo.DeliverDetail">
-        SELECT * from t_resume a join t_position b on a.positions=b.positions join t_deliveryrecord c on a.userid=c.userid where a.userid=#{a.userid,jdbcType=INTEGER} and a.resumeid=#{a.resumeid,jdbcType=INTEGER} and b.positionid=#{b.positionid,jdbcType=INTEGER}
-    </select>
-</mapper>

@@ -2,6 +2,20 @@ package example.pojo;
 
 public class Position {
 
+    private int positionid;
+    private String companyId;
+    private String positions;
+    private String postype;
+    private String posdate;
+    private String posnum;
+    private String posdes;
+    private String posreq;
+    private String possal;
+    private String posphone;
+    private String posloc;
+    private String companyName;
+    private String comdes;
+
     public int getPositionid() {
         return positionid;
     }
@@ -10,12 +24,12 @@ public class Position {
         this.positionid = positionid;
     }
 
-    public int getUserid() {
-        return userid;
+    public String getCompanyId() {
+        return companyId;
     }
 
-    public void setUserid(int userid) {
-        this.userid = userid;
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
     }
 
     public String getPositions() {
@@ -90,12 +104,12 @@ public class Position {
         this.posloc = posloc;
     }
 
-    public String getCompany() {
-        return company;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     public String getComdes() {
@@ -105,21 +119,4 @@ public class Position {
     public void setComdes(String comdes) {
         this.comdes = comdes;
     }
-
-    private int positionid;
-    private int userid;
-    private String positions;
-    private String postype;
-    private String posdate;
-    private String posnum;
-    private String posdes;
-    private String posreq;
-    private String possal;
-    private String posphone;
-    private String posloc;
-    private String company;
-    private String comdes;
-
-
-
 }

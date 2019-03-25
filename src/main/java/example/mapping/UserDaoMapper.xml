@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="example.dao.IUserDao">
+<mapper namespace="example.dao.IEmpolyDao">
     <resultMap id="BaseResultMap" type="example.pojo.User">
         <id column="autoid" jdbcType="INTEGER" property="autoid" />
         <result column="username" jdbcType="VARCHAR" property="username" />

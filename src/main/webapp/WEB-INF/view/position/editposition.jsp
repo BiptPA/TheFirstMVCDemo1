@@ -36,7 +36,7 @@
 
         工作地点：<input type="text" name="posloc" value="${position.posloc}"/><br>
 
-        公司名称：<input type="text" name="company" value="${position.company}"/><br>
+        公司名称：<input type="text" name="companyName" value="${position.companyName}"/><br>
 
         公司描述：<input type="text" name="comdes" value="${position.comdes}"/><br>
 

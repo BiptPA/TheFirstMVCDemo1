@@ -15,7 +15,6 @@
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>
-            <th>用户编号</th>
             <th>职位</th>
             <th>职位详情<th>
             <%--<th>修改操作</th>--%>
@@ -33,7 +32,6 @@
         <c:forEach items="${positions}" var="p">
             <tr>
                 <td>${p.positionid}</td>
-                <td>${p.userid}</td>
                 <td>${p.positions}</td>
                 <%--<td>${p.postype}</td>--%>
                 <%--<td>${p.posdate}</td>--%>

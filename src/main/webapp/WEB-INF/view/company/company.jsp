@@ -12,7 +12,7 @@
 
 <%--company=<%=request.getParameter("company")%>--%>
 <%--<form id="listPosition" method="post">--%>
-<p><div class="text" style=" text-align:center;"><h1>公司名：${company}</h1></div></p>
+<p><div class="text" style=" text-align:center;"><h1>公司名：${company.companyName}</h1></div></p>
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>
@@ -31,10 +31,10 @@
             <%--<th>公司名称</th>--%>
             <%--<th>公司描述</th>--%>
         </tr>
-        <c:forEach items="${company}" var="c">
+        <c:forEach items="${company.positionList}" var="c">
             <tr>
                     <td>${c.positionid}</td>
-                    <td>${c.userid}</td>
+                    <td>${c.companyName}</td>
                     <td>${c.positions}</td>
                     <%--<td>${p.postype}</td>--%>
                     <%--<td>${p.posdate}</td>--%>
