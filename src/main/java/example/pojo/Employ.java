@@ -15,6 +15,9 @@ public class Employ {
 
     private String pwd;
 
+
+
+
     public int getAutoId() {
         return autoId;
     }

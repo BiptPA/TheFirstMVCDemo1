@@ -13,8 +13,7 @@ public class Position {
     private String possal;
     private String posphone;
     private String posloc;
-    private String companyName;
-    private String comdes;
+
 
     public int getPositionid() {
         return positionid;
@@ -104,19 +103,4 @@ public class Position {
         this.posloc = posloc;
     }
 
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public String getComdes() {
-        return comdes;
-    }
-
-    public void setComdes(String comdes) {
-        this.comdes = comdes;
-    }
 }

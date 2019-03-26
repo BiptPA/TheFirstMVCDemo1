@@ -54,9 +54,7 @@ public class PositionController {
         String possal = request.getParameter("possal");
         String posphone = request.getParameter("posphone");
         String posloc = request.getParameter("posloc");
-        String companyName = request.getParameter("companyName");
-        String comdes = request.getParameter("comdes");
-        positionService.insertPosition(positions,postype,posdate,posnum,posdes,posreq,possal,posphone,posloc,companyName,comdes);
+        positionService.insertPosition(positions,postype,posdate,posnum,posdes,posreq,possal,posphone,posloc);
         return "redirect:/position/getPosition";
 }
 
@@ -82,9 +80,7 @@ public class PositionController {
         String possal = request.getParameter("possal");
         String posphone = request.getParameter("posphone");
         String posloc = request.getParameter("posloc");
-        String companyName = request.getParameter("companyName");
-        String comdes = request.getParameter("comdes");
-        positionService.updateposition(id, positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc, companyName, comdes);
+        positionService.updateposition(id, positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc);
         return "redirect:/position/getPosition";
     }
 

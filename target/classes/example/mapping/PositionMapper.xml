@@ -13,12 +13,10 @@
         <result column="possal" jdbcType="VARCHAR" property="possal" />
         <result column="posphone" jdbcType="VARCHAR" property="posphone" />
         <result column="posloc" jdbcType="VARCHAR" property="posloc" />
-        <result column="companyName" jdbcType="VARCHAR" property="companyName" />
-        <result column="comdes" jdbcType="VARCHAR" property="comdes" />
     </resultMap>
     <sql id="Base_Column_List">
       positionid, company_id, positions, postype,
-      posdate, posnum, posdes, posreq, possal, posphone, posloc, companyName, comdes
+      posdate, posnum, posdes, posreq, possal, posphone, posloc
     </sql>
 
     <select id="findPositionByCompanyId" resultMap="BaseResultMap">
@@ -49,8 +47,8 @@
     </select>
 
     <insert id="insertPositions" parameterType="example.pojo.Position">
-        insert into t_position(positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc, companyName, comdes)
-        values (#{positions,jdbcType=VARCHAR},#{postype,jdbcType=VARCHAR},#{posdate,jdbcType=VARCHAR},#{posnum,jdbcType=VARCHAR},#{posdes,jdbcType=VARCHAR},#{posreq,jdbcType=VARCHAR},#{possal,jdbcType=VARCHAR},#{posphone,jdbcType=VARCHAR},#{posloc,jdbcType=VARCHAR},#{companyName,jdbcType=VARCHAR},#{comdes,jdbcType=VARCHAR})
+        insert into t_position(positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc)
+        values (#{positions,jdbcType=VARCHAR},#{postype,jdbcType=VARCHAR},#{posdate,jdbcType=VARCHAR},#{posnum,jdbcType=VARCHAR},#{posdes,jdbcType=VARCHAR},#{posreq,jdbcType=VARCHAR},#{possal,jdbcType=VARCHAR},#{posphone,jdbcType=VARCHAR},#{posloc,jdbcType=VARCHAR})
     </insert>
 
     <select id="findPositionById" resultMap="BaseResultMap">
@@ -69,9 +67,7 @@
       posdes =#{posdes,jdbcType=VARCHAR},
       possal=#{possal,jdbcType=VARCHAR},
       posphone =#{posphone,jdbcType=VARCHAR},
-      posloc =#{posloc,jdbcType=VARCHAR},
-      companyName =#{companyName,jdbcType=VARCHAR},
-      comdes =#{comdes,jdbcType=VARCHAR}
+      posloc =#{posloc,jdbcType=VARCHAR}
       where positionid = #{positionid,jdbcType=INTEGER}
     </update>
 

@@ -2,7 +2,7 @@ package example.service;
 
 import javax.servlet.http.HttpSession;
 
-public interface IEmployService {
+public interface IEmployerService {
 
     /**
      * 根据当前登陆用户获取HR所在公司ID

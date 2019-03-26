@@ -31,7 +31,7 @@ public class PositionServiceImpl implements IPositionService {
     }
 
     @Override
-    public int insertPosition(String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc,String companyName,String comdes){
+    public int insertPosition(String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc){
         Position position = new Position();
         position.setPositions(positions);
         position.setPostype(postype);
@@ -42,8 +42,6 @@ public class PositionServiceImpl implements IPositionService {
         position.setPossal(possal);
         position.setPosphone(posphone);
         position.setPosloc(posloc);
-        position.setCompanyName(companyName);
-        position.setComdes(comdes);
         return positionDao.insertPositions(position);
     }
     @Override
@@ -56,7 +54,7 @@ public class PositionServiceImpl implements IPositionService {
     }
 
     @Override
-    public int updateposition(String id,String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc,String companyName,String comdes){
+    public int updateposition(String id,String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc){
         Position posi = new Position();
         int positionid = Integer.parseInt(id);
         posi.setPositionid(positionid);
@@ -69,8 +67,6 @@ public class PositionServiceImpl implements IPositionService {
         posi.setPossal(possal);
         posi.setPosphone(posphone);
         posi.setPosloc(posloc);
-        posi.setCompanyName(companyName);
-        posi.setComdes(comdes);
         return positionDao.updateposition(posi);
         }
 

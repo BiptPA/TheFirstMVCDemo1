@@ -16,6 +16,9 @@ public class Company {
 
     private String email;
 
+
+
+
     public int getAutoId() {
         return autoId;
     }

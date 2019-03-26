@@ -14,10 +14,10 @@
 
     <sql id="Base_Column_List">
       auto_id, company_id, employer_name,
-      employer_pwd, employer_address, employer_tel, employer_email
+      employer_pwd, employer_address, employer_tel, employer_email, employer_account
     </sql>
 
-    <select id="findEmployerByAccount" resultMap="example.pojo.Employer">
+    <select id="findEmployerByAccount" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from t_employer t

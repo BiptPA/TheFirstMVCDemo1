@@ -1,23 +1,23 @@
 package example.service.impl;
 
-import example.dao.IEmpolyDao;
+import example.dao.IEmpolyerDao;
 import example.pojo.Employer;
-import example.service.IEmployService;
+import example.service.IEmployerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpSession;
 
 @Component
-public class EmployServiceImpl implements IEmployService {
+public class EmployerServiceImpl implements IEmployerService {
 
     @Autowired
-    private IEmpolyDao empolyDao;
+    private IEmpolyerDao empolyerDao;
 
     @Override
     public String getCompanyId(HttpSession session) {
-        String account = (String) session.getAttribute("account");
-        Employer employer = empolyDao.findEmployerByAccount(account);
+        String account = (String) session.getAttribute("employerName");
+        Employer employer = empolyerDao.findEmployerByAccount(account);
         if (null != employer) {
             return employer.getCompanyId();
         }

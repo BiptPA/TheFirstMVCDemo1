@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface IPositionDao {
+
     List<Position> getAllPositions();
 
 //    List<Position> getPersonPositions();

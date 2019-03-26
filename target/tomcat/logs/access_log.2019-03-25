@@ -1,2 +1,0 @@
-0:0:0:0:0:0:0:1 - - [25/Mar/2019:17:29:23 +0800] "GET /company/getCompany HTTP/1.1" 500 8081 http-bio-8080-exec-1 142
-0:0:0:0:0:0:0:1 - - [25/Mar/2019:17:29:23 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-2 5
