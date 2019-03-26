@@ -8,7 +8,7 @@ public interface ICompanyService {
      * 获取当前登录HR的公司信息
      * @return
      */
-    CompanyDto getCompany(String empolyerName);
+    CompanyDto getCompany(String companyId);
 
 //    String getAllpositions();
 //

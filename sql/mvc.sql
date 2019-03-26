@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-26 22:04:48
+Date: 2019-03-27 00:21:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,14 +20,14 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_company`;
 CREATE TABLE `t_company` (
-  `auto_id` int(11) NOT NULL AUTO_INCREMENT,
-  `company_id` varchar(255) DEFAULT NULL,
-  `company_name` varchar(255) DEFAULT NULL,
-  `company_dscp` varchar(255) DEFAULT NULL,
+  `autoId` int(11) NOT NULL AUTO_INCREMENT,
+  `companyId` varchar(255) DEFAULT NULL,
+  `companyName` varchar(255) DEFAULT NULL,
+  `companyDscp` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `tel` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`auto_id`)
+  PRIMARY KEY (`autoId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -110,7 +110,7 @@ INSERT INTO `t_employer` VALUES ('1', '1', '李卓', '123', '北京大兴', '134
 DROP TABLE IF EXISTS `t_position`;
 CREATE TABLE `t_position` (
   `positionid` int(11) NOT NULL AUTO_INCREMENT,
-  `company_id` varchar(200) DEFAULT '2',
+  `companyId` varchar(200) DEFAULT '2',
   `positions` varchar(255) DEFAULT NULL,
   `postype` varchar(255) DEFAULT NULL,
   `posdate` varchar(255) DEFAULT NULL,
@@ -121,13 +121,13 @@ CREATE TABLE `t_position` (
   `posphone` varchar(255) DEFAULT NULL,
   `posloc` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`positionid`),
-  KEY `userid` (`company_id`)
+  KEY `userid` (`companyId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_position
 -- ----------------------------
-INSERT INTO `t_position` VALUES ('1', '2', 'java高级工程师', '高级工程师', '2019-03-07', '4', '略', '996', '12k+', '1234567890', '北京市朝阳区');
+INSERT INTO `t_position` VALUES ('1', '1', 'java高级工程师', '高级工程师', '2019-03-07', '4', '略', '996', '12k+', '1234567890', '北京市朝阳区');
 
 -- ----------------------------
 -- Table structure for t_resume

@@ -16,7 +16,6 @@
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>
-            <th>用户编号</th>
             <th>职位</th>
             <%--<th>职位详情<th>--%>
             <%--<th>修改操作</th>--%>
@@ -34,7 +33,6 @@
         <c:forEach items="${company.positionList}" var="c">
             <tr>
                     <td>${c.positionid}</td>
-                    <td>${c.companyName}</td>
                     <td>${c.positions}</td>
                     <%--<td>${p.postype}</td>--%>
                     <%--<td>${p.posdate}</td>--%>

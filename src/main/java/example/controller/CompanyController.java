@@ -31,9 +31,11 @@ public class CompanyController {
         HttpSession session  = request.getSession();
         //根据登录信息获取HR所在公司ID
         String companyId = employerService.getCompanyId(session);
+        companyId="1";
         System.out.println("公司编号是"+companyId);
         if (null != companyId) {
             //根据公司id获取公司信息和职位列表
+            System.out.println("companyId值是"+companyId+",Id已经传过来啦！");
             CompanyDto companyDto = companyService.getCompany(companyId);
             request.setAttribute("company", companyDto);
         }

@@ -19,20 +19,6 @@ public class CompanyDto {
 
     private List<Position> positionList;
 
-    public static CompanyDto from(Company company, List<Position> positionList) {
-        CompanyDto companyDto = new CompanyDto();
-        if (null != company){
-            companyDto.setAddress(company.getAddress());
-            companyDto.setCompanyDscp(company.getCompanyDscp());
-            companyDto.setCompanyName(company.getCompanyName());
-            companyDto.setEmail(company.getEmail());
-            companyDto.setTel(company.getTel());
-        }
-        companyDto.setPositionList(positionList);
-        return companyDto;
-    }
-
-
     public String getCompanyName() {
         return companyName;
     }
@@ -79,5 +65,19 @@ public class CompanyDto {
 
     public void setPositionList(List<Position> positionList) {
         this.positionList = positionList;
+    }
+
+
+    public static CompanyDto from(Company company, List<Position> positionList) {
+        CompanyDto companyDto = new CompanyDto();
+        if (null != company){
+            companyDto.setAddress(company.getAddress());
+            companyDto.setCompanyDscp(company.getCompanyDscp());
+            companyDto.setCompanyName(company.getCompanyName());
+            companyDto.setEmail(company.getEmail());
+            companyDto.setTel(company.getTel());
+        }
+        companyDto.setPositionList(positionList);
+        return companyDto;
     }
 }

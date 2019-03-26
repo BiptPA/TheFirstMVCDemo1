@@ -2,17 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="example.dao.ICompanyDao">
     <resultMap id="BaseResultMap" type="example.pojo.Company">
-        <id column="auto_id" jdbcType="INTEGER" property="autoId" />
-        <result column="company_id" jdbcType="VARCHAR" property="companyId" />
-        <result column="company_name" jdbcType="VARCHAR" property="companyName" />
-        <result column="company_dscp" jdbcType="VARCHAR" property="companyDscp" />
+        <id column="autoId" jdbcType="INTEGER" property="autoId" />
+        <result column="companyId" jdbcType="VARCHAR" property="companyId" />
+        <result column="companyName" jdbcType="VARCHAR" property="companyName" />
+        <result column="companyDscp" jdbcType="VARCHAR" property="companyDscp" />
         <result column="address" jdbcType="VARCHAR" property="address" />
         <result column="tel" jdbcType="VARCHAR" property="tel" />
         <result column="email" jdbcType="VARCHAR" property="email" />
     </resultMap>
 
     <sql id="Base_Column_List">
-      auto_id, company_id, company_name, company_dscp,
+      autoId, companyId, companyName, companyDscp,
       address, tel, email
     </sql>
 
@@ -20,6 +20,6 @@
         select
         <include refid="Base_Column_List" />
         from t_company t
-        where t.company_id = #{companyId, jdbcType = VARCHAR}
+        where t.companyId = #{companyId, jdbcType = VARCHAR}
     </select>
 </mapper>

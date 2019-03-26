@@ -3,7 +3,7 @@
 <mapper namespace="example.dao.IPositionDao">
     <resultMap id="BaseResultMap" type="example.pojo.Position">
         <id column="positionid" jdbcType="INTEGER" property="positionid" />
-        <result column="company_id" jdbcType="VARCHAR" property="companyId" />
+        <result column="companyId" jdbcType="VARCHAR" property="companyId" />
         <result column="positions" jdbcType="VARCHAR" property="positions" />
         <result column="postype" jdbcType="VARCHAR" property="postype" />
         <result column="posdate" jdbcType="VARCHAR" property="posdate" />
@@ -15,7 +15,7 @@
         <result column="posloc" jdbcType="VARCHAR" property="posloc" />
     </resultMap>
     <sql id="Base_Column_List">
-      positionid, company_id, positions, postype,
+      positionid, companyId, positions, postype,
       posdate, posnum, posdes, posreq, possal, posphone, posloc
     </sql>
 
@@ -23,7 +23,7 @@
         select
         <include refid="Base_Column_List"/>
         from t_position t
-        where t.company_id = #{companyId, jdbcType = VARCHAR}
+        where t.companyId = #{companyId, jdbcType = VARCHAR}
     </select>
 
     <select id="getAllPositions" resultMap="BaseResultMap">
