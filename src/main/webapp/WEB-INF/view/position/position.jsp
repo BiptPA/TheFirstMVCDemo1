@@ -26,8 +26,6 @@
             <%--<th>薪资</th>--%>
             <%--<th>联系电话</th>--%>
             <%--<th>工作地址</th>--%>
-            <%--<th>公司名称</th>--%>
-            <%--<th>公司描述</th>--%>
         </tr>
         <c:forEach items="${positions}" var="p">
             <tr>
@@ -41,8 +39,6 @@
                 <%--<td>${p.possal}</td>--%>
                 <%--<td>${p.posphone}</td>--%>
                 <%--<td>${p.posloc}</td>--%>
-                <%--<td>${p.company}</td>--%>
-                <%--<td>${p.comdes}</td>--%>
                 <td><a href="/position/getPersonPosition?positionid=${p.positionid}">职位详情</a></td>
             </tr>
         </c:forEach>

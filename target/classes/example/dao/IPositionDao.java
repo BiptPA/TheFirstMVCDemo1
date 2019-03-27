@@ -27,4 +27,9 @@ public interface IPositionDao {
      * @return
      */
     List<Position> findPositionByCompanyId(@Param("companyId") String companyId);
+
+    /**
+     * 根据职位编号查出这个职位的详情
+     */
+    List<Position> selectCompanyPosition(@Param("positionid")String positionid);
 }

@@ -7,6 +7,7 @@
 <form action="/position/addPosition" method="post">
     <fieldset>
         <legend>添加职位</legend>
+        公司编号：<input type="text" name="companyId"><br>
         职位名称：<input type="text" name="positions"><br>
         职位类型：<input type="text" name="postype"><br>
         发布时间：<input type="date" name="posdate"><br>

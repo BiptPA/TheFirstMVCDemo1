@@ -47,8 +47,8 @@
     </select>
 
     <insert id="insertPositions" parameterType="example.pojo.Position">
-        insert into t_position(positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc)
-        values (#{positions,jdbcType=VARCHAR},#{postype,jdbcType=VARCHAR},#{posdate,jdbcType=VARCHAR},#{posnum,jdbcType=VARCHAR},#{posdes,jdbcType=VARCHAR},#{posreq,jdbcType=VARCHAR},#{possal,jdbcType=VARCHAR},#{posphone,jdbcType=VARCHAR},#{posloc,jdbcType=VARCHAR})
+        insert into t_position(companyId,positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc)
+        values (#{companyId,jdbcType=VARCHAR},#{positions,jdbcType=VARCHAR},#{postype,jdbcType=VARCHAR},#{posdate,jdbcType=VARCHAR},#{posnum,jdbcType=VARCHAR},#{posdes,jdbcType=VARCHAR},#{posreq,jdbcType=VARCHAR},#{possal,jdbcType=VARCHAR},#{posphone,jdbcType=VARCHAR},#{posloc,jdbcType=VARCHAR})
     </insert>
 
     <select id="findPositionById" resultMap="BaseResultMap">
@@ -75,4 +75,12 @@
       delete from t_position
       where positionid = #{positionid,jdbcType=INTEGER}
     </delete>
+
+
+    <select id="selectCompanyPosition" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_position
+        where positionid=#{positionid,jdbcType=INTEGER}
+    </select>
 </mapper>

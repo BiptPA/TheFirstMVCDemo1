@@ -11,12 +11,17 @@ public interface IPositionService {
 //    List<Position> getPersonPosition();
     Position getperPositionById(String positionid);
 
-    int insertPosition(String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc);
+    int insertPosition(String companyId,String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc);
 
     Position getPositionById(String id);
 
     int updateposition(String id,String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc);
 
     void deletePosition(java.io.Serializable id);
+
+    /**
+     * 根据职位ID查出这个职位的详情
+     */
+    List<Position> getCompanyPosition(String positionid);
 
 }

@@ -6,12 +6,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <title>Title</title>
-
 </head>
 <body>
-
-<%--company=<%=request.getParameter("company")%>--%>
-<%--<form id="listPosition" method="post">--%>
 <p><div class="text" style=" text-align:center;"><h1>公司名：${company.companyName}</h1></div></p>
     <table align="center" valign="center" border="1">
         <tr>
@@ -27,8 +23,6 @@
             <%--<th>薪资</th>--%>
             <%--<th>联系电话</th>--%>
             <%--<th>工作地址</th>--%>
-            <%--<th>公司名称</th>--%>
-            <%--<th>公司描述</th>--%>
         </tr>
         <c:forEach items="${company.positionList}" var="c">
             <tr>
@@ -42,9 +36,7 @@
                     <%--<td>${p.possal}</td>--%>
                     <%--<td>${p.posphone}</td>--%>
                     <%--<td>${p.posloc}</td>--%>
-                    <%--<td>${p.company}</td>--%>
-                    <%--<td>${p.comdes}</td>--%>
-                    <td><a href="/company/getCompanyDetail?positionid=${c.positionid}">投递详情</a></td>
+                    <td><a href="/position/getCompanyPositionDetail?positionid=${c.positionid}">职位投递详情</a></td>
                     <%--?positionid=${c.positionid}--%>
                     <%--<td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>--%>
                     <%--<td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>--%>

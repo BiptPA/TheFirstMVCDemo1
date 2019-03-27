@@ -1,6 +1,7 @@
 package example.controller;
 
 import example.dto.CompanyDto;
+import example.pojo.Position;
 import example.service.ICompanyService;
 import example.service.IEmployerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class CompanyController {
     private IEmployerService employerService;
 
     /**
-     *
-     * @param request
+     *公司和其对应的职位
+     * @param request session
      * @return
      */
     @RequestMapping(value = "getCompany", method = RequestMethod.GET)

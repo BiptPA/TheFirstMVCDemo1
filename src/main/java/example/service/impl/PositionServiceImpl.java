@@ -31,8 +31,9 @@ public class PositionServiceImpl implements IPositionService {
     }
 
     @Override
-    public int insertPosition(String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc){
+    public int insertPosition(String companyId,String positions,String postype,String posdate,String posnum,String posdes,String posreq,String possal,String posphone,String posloc){
         Position position = new Position();
+        position.setCompanyId(companyId);
         position.setPositions(positions);
         position.setPostype(postype);
         position.setPosdate(posdate);
@@ -74,5 +75,13 @@ public class PositionServiceImpl implements IPositionService {
         public void deletePosition(Serializable id){
         positionDao.deletePosition(id);
         }
+
+
+        @Override
+        public List<Position> getCompanyPosition(String positionid){
+            List<Position> positionDetail = positionDao.selectCompanyPosition(positionid);
+            return positionDetail;
+    }
+
     }
 

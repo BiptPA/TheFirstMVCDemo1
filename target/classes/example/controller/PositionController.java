@@ -45,6 +45,7 @@ public class PositionController {
 
     @RequestMapping(value = "addPosition",method = RequestMethod.POST)
     public String addPosition(HttpServletRequest request){
+        String companyId = request.getParameter("companyId");
         String positions = request.getParameter("positions");
         String postype = request.getParameter("postype");
         String posdate = request.getParameter("posdate");
@@ -54,7 +55,7 @@ public class PositionController {
         String possal = request.getParameter("possal");
         String posphone = request.getParameter("posphone");
         String posloc = request.getParameter("posloc");
-        positionService.insertPosition(positions,postype,posdate,posnum,posdes,posreq,possal,posphone,posloc);
+        positionService.insertPosition(companyId,positions,postype,posdate,posnum,posdes,posreq,possal,posphone,posloc);
         return "redirect:/position/getPosition";
 }
 
@@ -89,6 +90,21 @@ public class PositionController {
         positionService.deletePosition(id);
         return "redirect:/position/getPosition";
     }
+
+    /**
+     * 公司的职位详情
+     * @param request  positionid
+     * @return
+     */
+    @RequestMapping(value = "getCompanyPositionDetail", method = RequestMethod.GET)
+    public String getCompanyPositionDetail(HttpServletRequest request){
+        String positionid = request.getParameter("positionid");
+        List<Position> companyPosition = positionService.getCompanyPosition(positionid);
+        request.setAttribute("companyPosition",companyPosition);
+        return "position/companyPositionDetail";
+    }
+
+
 
 
 }

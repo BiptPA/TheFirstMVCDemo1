@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-27 00:21:56
+Date: 2019-03-27 23:06:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -122,12 +122,14 @@ CREATE TABLE `t_position` (
   `posloc` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`positionid`),
   KEY `userid` (`companyId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_position
 -- ----------------------------
 INSERT INTO `t_position` VALUES ('1', '1', 'java高级工程师', '高级工程师', '2019-03-07', '4', '略', '996', '12k+', '1234567890', '北京市朝阳区');
+INSERT INTO `t_position` VALUES ('3', '1', '大数据分析师', '高级工程师', '2019-03-06', '5', '略', '996', '12k+', '9876543210', '北京市西城区');
+INSERT INTO `t_position` VALUES ('4', '1', '软件工程师', '高级工程师', '2019-03-05', '4', '略', '996', '18k+', '0123456789', '北京市丰台区');
 
 -- ----------------------------
 -- Table structure for t_resume
@@ -154,7 +156,7 @@ CREATE TABLE `t_resume` (
   `nowaddress` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`resumeid`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_resume
