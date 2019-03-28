@@ -1,5 +1,6 @@
 package example.service;
 
+import example.pojo.Deliveryrecord;
 import example.pojo.Position;
 
 import java.util.List;
@@ -23,5 +24,11 @@ public interface IPositionService {
      * 根据职位ID查出这个职位的详情
      */
     List<Position> getCompanyPosition(String positionid);
+
+    /**
+     * 根据职位ID查出投递编号、用户编号、简历编号
+     * @return
+     */
+    List<Deliveryrecord> getAllRecord(String positionid);
 
 }

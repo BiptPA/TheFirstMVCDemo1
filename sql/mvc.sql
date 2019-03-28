@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-27 23:06:09
+Date: 2019-03-28 23:35:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -71,6 +71,7 @@ INSERT INTO `t_deliveryrecord` VALUES ('10', '2', '1', '5', null);
 DROP TABLE IF EXISTS `t_employ`;
 CREATE TABLE `t_employ` (
   `auto_id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) DEFAULT NULL,
   `real_name` varchar(200) DEFAULT NULL,
   `sex` varchar(200) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,

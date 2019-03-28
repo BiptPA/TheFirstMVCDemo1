@@ -1,5 +1,6 @@
 package example.dao;
 
+import example.pojo.Deliveryrecord;
 import example.pojo.Position;
 import org.apache.ibatis.annotations.Param;
 
@@ -32,4 +33,10 @@ public interface IPositionDao {
      * 根据职位编号查出这个职位的详情
      */
     List<Position> selectCompanyPosition(@Param("positionid")String positionid);
+
+    /**
+     * 根据职位编号查出 userid、deliverid、resumeid
+     */
+    List<Deliveryrecord> getRecord(@Param("positionid")String positionid);
+
 }

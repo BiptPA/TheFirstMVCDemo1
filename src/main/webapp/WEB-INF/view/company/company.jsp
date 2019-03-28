@@ -13,33 +13,12 @@
         <tr>
             <th>职位编号</th>
             <th>职位</th>
-            <%--<th>职位详情<th>--%>
-            <%--<th>修改操作</th>--%>
-            <%--<th>职位类型</th>--%>
-            <%--<th>发布时间</th>--%>
-            <%--<th>职位数量</th>--%>
-            <%--<th>职位描述</th>--%>
-            <%--<th>职位要求</th>--%>
-            <%--<th>薪资</th>--%>
-            <%--<th>联系电话</th>--%>
-            <%--<th>工作地址</th>--%>
         </tr>
         <c:forEach items="${company.positionList}" var="c">
             <tr>
-                    <td>${c.positionid}</td>
-                    <td>${c.positions}</td>
-                    <%--<td>${p.postype}</td>--%>
-                    <%--<td>${p.posdate}</td>--%>
-                    <%--<td>${p.posnum}</td>--%>
-                    <%--<td>${p.posdes}</td>--%>
-                    <%--<td>${p.posreq}</td>--%>
-                    <%--<td>${p.possal}</td>--%>
-                    <%--<td>${p.posphone}</td>--%>
-                    <%--<td>${p.posloc}</td>--%>
-                    <td><a href="/position/getCompanyPositionDetail?positionid=${c.positionid}">职位投递详情</a></td>
-                    <%--?positionid=${c.positionid}--%>
-                    <%--<td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>--%>
-                    <%--<td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>--%>
+                <td>${c.positionid}</td>
+                <td>${c.positions}</td>
+                <td><a href="/position/getCompanyPositionDetail?positionid=${c.positionid}">职位投递详情</a></td>
             </tr>
         </c:forEach>
 

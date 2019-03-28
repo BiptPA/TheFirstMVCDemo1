@@ -1,6 +1,7 @@
 package example.service.impl;
 
 import example.dao.IPositionDao;
+import example.pojo.Deliveryrecord;
 import example.pojo.Position;
 import example.service.IPositionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,7 +82,14 @@ public class PositionServiceImpl implements IPositionService {
         public List<Position> getCompanyPosition(String positionid){
             List<Position> positionDetail = positionDao.selectCompanyPosition(positionid);
             return positionDetail;
-    }
+        }
+
+
+        @Override
+        public List<Deliveryrecord> getAllRecord(String positionid){
+            List<Deliveryrecord> record = positionDao.getRecord(positionid);
+            return record;
+        }
 
     }
 

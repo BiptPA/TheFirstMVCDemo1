@@ -1,6 +1,7 @@
 package example.controller;
 
 
+import example.pojo.Deliveryrecord;
 import example.service.IDeliveryrecordService;
 import org.springframework.beans.factory.HierarchicalBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 @RequestMapping("/deliveryrecord/")
@@ -27,5 +29,7 @@ public class DeliveryrecordController {
         deliveryrecordService.adddeliveryrecord(positionid,resumeid,userid);
         return "deliveryrecord/addSuccess";
     }
+
+
 
 }

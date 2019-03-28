@@ -6,6 +6,8 @@ import example.service.IDeliveryrecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class DeliveryrecordServiceImpl implements IDeliveryrecordService {
 
@@ -20,6 +22,8 @@ public class DeliveryrecordServiceImpl implements IDeliveryrecordService {
         deliveryrecord.setUserid(Integer.parseInt(userid));
         return deliveryDao.adddeliveryrecords(deliveryrecord);
     }
+
+
 
 
 }

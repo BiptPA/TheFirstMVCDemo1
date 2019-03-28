@@ -1,5 +1,7 @@
 package example.controller;
 
+import example.dto.CompanyDto;
+import example.pojo.Deliveryrecord;
 import example.pojo.Position;
 import example.service.IPositionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -101,10 +103,17 @@ public class PositionController {
         String positionid = request.getParameter("positionid");
         List<Position> companyPosition = positionService.getCompanyPosition(positionid);
         request.setAttribute("companyPosition",companyPosition);
+
+        /**
+         * 投递记录
+         * 根据 positionid 查出deliverid,userid,resumeid
+         */
+        List<Deliveryrecord> deliveryrecord = positionService.getAllRecord(positionid);
+        request.setAttribute("deliveryrecord",deliveryrecord);
         return "position/companyPositionDetail";
     }
 
 
-
+//position/getCompanyPositionDetail
 
 }

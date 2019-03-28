@@ -14,4 +14,16 @@
         values (#{userid,jdbcType=INTEGER},#{positionid,jdbcType=INTEGER},#{resumeid,jdbcType=INTEGER})
     </insert>
 
+    <!--<sql id="Base_Column_List">-->
+      <!--deliverid, userid, positionid, resumeid,-->
+      <!--acceptorrefuse-->
+    <!--</sql>-->
+
+    <!--<select id="getRecord" resultMap="BaseResultMap">-->
+        <!--select-->
+        <!--<include refid="Base_Column_List"/>-->
+        <!--from t_deliveryrecord t-->
+        <!--where t.positionid = #{positionid, jdbcType = VARCHAR}-->
+    <!--</select>-->
+
 </mapper>

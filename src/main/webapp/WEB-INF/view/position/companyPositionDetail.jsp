@@ -38,16 +38,31 @@
             <td>${p.possal}</td>
             <td>${p.posphone}</td>
             <td>${p.posloc}</td>
-
-                <%--<td><a href="/company/getCompanyDetail?positionid=${c.positionid}">投递详情</a></td>--%>
-                <%--<td><input type="button" value="修改" onclick="updatePosition(${p.positionid});"/></td>--%>
-                <%--<td><a href="/position//deletePosition?id=${p.positionid}">删除</a></td>--%>
         </tr>
     </c:forEach>
-    <%--<div>--%>
-    <%--<a href="/position/addPositionJsp" >新增职位</a>--%>
+    </table>
+    </form>
+    <p>
+        <div class="text" style=" text-align:center;"><h1>此职位的简历投递情况</h1></div>
+    </p>
+    <table align="center" valign="center" border="1">
+        <tr>
+            <th>投递编号</th>
+            <th>用户编号</th>
+            <th>简历编号</th>
+            <th>投递权限</th>
+            <th>具体操作</th>
+        </tr>
+        <c:forEach items="${deliveryrecord}" var="c">
+            <tr>
+                <td>${c.deliverid}</td>
+                <td>${c.userid}</td>
+                <td>${c.resumeid}</td>
+                <td>${c.acceptorrefuse}</td>
+                <td><a href="/deliveryrecord/updateDeliveryrecord?deliverid=${c.deliverid}&resumeid=${c.resumeid}&userid=${c.userid}">简历处理</a></td>
+            </tr>
+        </c:forEach>
 
-    <%--</div>--%>
 </table>
 </form>
 </body>
