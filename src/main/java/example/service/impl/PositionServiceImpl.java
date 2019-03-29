@@ -85,11 +85,7 @@ public class PositionServiceImpl implements IPositionService {
         }
 
 
-        @Override
-        public List<Deliveryrecord> getAllRecord(String positionid){
-            List<Deliveryrecord> record = positionDao.getRecord(positionid);
-            return record;
-        }
+
 
     }
 

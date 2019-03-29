@@ -34,9 +34,5 @@ public interface IPositionDao {
      */
     List<Position> selectCompanyPosition(@Param("positionid")String positionid);
 
-    /**
-     * 根据职位编号查出 userid、deliverid、resumeid
-     */
-    List<Deliveryrecord> getRecord(@Param("positionid")String positionid);
 
 }

@@ -78,7 +78,7 @@
                 <td>${resume.email}</td>
                 <td>${resume.qq}</td>
                 <td>${resume.nowaddress}</td>
-                <td><a href="/deliveryrecord/addDeliveryrecord?positionid=<%=request.getParameter("positionid")%>&resumeid=${resume.resumeid}&userid=${resume.userid}">提交简历</a></td>
+                <td><a href="/deliveryrecord/addDeliveryrecord?positions=${resume.positions}&realname=${resume.realname}&positionid=<%=request.getParameter("positionid")%>&resumeid=${resume.resumeid}&userid=${resume.userid}">提交简历</a></td>
                 <td><input type="button" value="修改" onclick="updateResume(${resume.resumeid});"/></td>
                 <td><a href="/resume/deleteresume?id=${resume.resumeid}">删除</a></td>
             </tr>

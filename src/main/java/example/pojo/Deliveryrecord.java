@@ -1,6 +1,13 @@
 package example.pojo;
 
 public class Deliveryrecord {
+    private int deliverid;
+    private int userid;
+    private int resumeid;
+    private int positionid;
+    private String realname;
+    private String positions;
+    private String acceptorrefuse;
 
     public int getDeliverid() {
         return deliverid;
@@ -34,6 +41,22 @@ public class Deliveryrecord {
         this.positionid = positionid;
     }
 
+    public String getRealname() {
+        return realname;
+    }
+
+    public void setRealname(String realname) {
+        this.realname = realname;
+    }
+
+    public String getPositions() {
+        return positions;
+    }
+
+    public void setPositions(String positions) {
+        this.positions = positions;
+    }
+
     public String getAcceptorrefuse() {
         return acceptorrefuse;
     }
@@ -41,11 +64,4 @@ public class Deliveryrecord {
     public void setAcceptorrefuse(String acceptorrefuse) {
         this.acceptorrefuse = acceptorrefuse;
     }
-
-
-    private int deliverid;
-    private int userid;
-    private int resumeid;
-    private int positionid;
-    private String acceptorrefuse;
 }

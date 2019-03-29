@@ -3,6 +3,7 @@ package example.controller;
 import example.dto.CompanyDto;
 import example.pojo.Deliveryrecord;
 import example.pojo.Position;
+import example.service.IDeliveryrecordService;
 import example.service.IPositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,9 @@ import java.util.List;
 public class PositionController {
     @Autowired
     private IPositionService positionService;
+
+    @Autowired
+    private IDeliveryrecordService deliveryrecordService;
 
     @RequestMapping(value = "getPosition" , method = RequestMethod.GET)
     public String getPosition(HttpServletRequest request) {
@@ -108,7 +112,7 @@ public class PositionController {
          * 投递记录
          * 根据 positionid 查出deliverid,userid,resumeid
          */
-        List<Deliveryrecord> deliveryrecord = positionService.getAllRecord(positionid);
+        List<Deliveryrecord> deliveryrecord = deliveryrecordService.getAllRecord(positionid);
         request.setAttribute("deliveryrecord",deliveryrecord);
         return "position/companyPositionDetail";
     }

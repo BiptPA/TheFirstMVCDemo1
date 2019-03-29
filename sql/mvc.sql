@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-28 23:35:13
+Date: 2019-03-29 16:59:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,26 +44,20 @@ CREATE TABLE `t_deliveryrecord` (
   `userid` int(11) DEFAULT NULL,
   `positionid` int(11) DEFAULT NULL,
   `resumeid` int(11) DEFAULT NULL,
+  `realname` varchar(255) DEFAULT NULL,
+  `positions` varchar(255) DEFAULT NULL,
   `acceptorrefuse` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`deliverid`),
   KEY `userid` (`userid`),
   KEY `positionid` (`positionid`),
   KEY `resumeid` (`resumeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_deliveryrecord
 -- ----------------------------
-INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '3', '5', null);
-INSERT INTO `t_deliveryrecord` VALUES ('2', '2', '3', '5', null);
-INSERT INTO `t_deliveryrecord` VALUES ('3', '2', '3', '7', null);
-INSERT INTO `t_deliveryrecord` VALUES ('4', '2', '2', '5', null);
-INSERT INTO `t_deliveryrecord` VALUES ('5', '2', '2', '7', null);
-INSERT INTO `t_deliveryrecord` VALUES ('6', '2', '1', '5', null);
-INSERT INTO `t_deliveryrecord` VALUES ('7', '2', '1', '5', null);
-INSERT INTO `t_deliveryrecord` VALUES ('8', '2', '2', '7', null);
-INSERT INTO `t_deliveryrecord` VALUES ('9', '2', '1', '5', null);
-INSERT INTO `t_deliveryrecord` VALUES ('10', '2', '1', '5', null);
+INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '3', '5', '赵枫枫', '大数据分析师', '通过');
+INSERT INTO `t_deliveryrecord` VALUES ('4', '2', '2', '5', null, null, null);
 
 -- ----------------------------
 -- Table structure for t_employ
@@ -162,7 +156,7 @@ CREATE TABLE `t_resume` (
 -- ----------------------------
 -- Records of t_resume
 -- ----------------------------
-INSERT INTO `t_resume` VALUES ('5', '2', '赵枫枫', '2211958081334', '男', '本科', '北京石油化工学院', '英语', '4级', '2级', '计算机科学与技术', '1', '大数据分析师', '15000+', '13879987690', '33800239@qq.com', '33800239', '北京大兴');
+INSERT INTO `t_resume` VALUES ('5', '2', '赵枫枫', '2211958081334', '男', '本科', '北京石油化工学院', '英语', null, '4级', '计算机科学与技术', '1', '大数据分析师', '15000+', '13879987690', '33800239@qq.com', '33800239', '北京丰台');
 
 -- ----------------------------
 -- Table structure for t_role

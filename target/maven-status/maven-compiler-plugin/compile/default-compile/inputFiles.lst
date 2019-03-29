@@ -1,6 +1,5 @@
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\pojo\Deliveryrecord.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\service\IDeliveryrecordService.java
-F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\pojo\DeliverDetail.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\controller\CompanyController.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\controller\ResumeController.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\pojo\Employ.java
@@ -16,6 +15,7 @@ F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\service\impl\Del
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\service\impl\ResumeServiceImpl.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\service\IEmployerService.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\pojo\Company.java
+F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\dto\ResumeDto.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\dao\ICompanyDao.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\service\ICompanyService.java
 F:\TheFirstMVCDemo (demo)\TheFirstMVCDemo\src\main\java\example\service\impl\PositionServiceImpl.java

@@ -1,6 +1,7 @@
 package example.controller;
 
 
+import example.dto.ResumeDto;
 import example.pojo.Deliveryrecord;
 import example.service.IDeliveryrecordService;
 import org.springframework.beans.factory.HierarchicalBeanFactory;
@@ -20,16 +21,35 @@ public class DeliveryrecordController {
     private IDeliveryrecordService deliveryrecordService;
 
 
-    @RequestMapping(value = "addDeliveryrecord",method = RequestMethod.GET)
+    @RequestMapping(value = "/addDeliveryrecord",method = RequestMethod.GET)
     public String addDeliveryrecord(HttpServletRequest request){
         String positionid = request.getParameter("positionid");
         String resumeid = request.getParameter("resumeid");
         String userid= request.getParameter("userid");
-       // System.out.println(positionid+" "+resumeid+" "+userid);
-        deliveryrecordService.adddeliveryrecord(positionid,resumeid,userid);
+        String realname = request.getParameter("realname");
+        String positions = request.getParameter("positions");
+        deliveryrecordService.adddeliveryrecord(positionid,resumeid,userid,realname,positions);
         return "deliveryrecord/addSuccess";
+    }
+    //改
+    @RequestMapping(value = "/updateRecordJsp",method = RequestMethod.POST)
+    public String updateRecordJsp(HttpServletRequest request) {
+        String id = request.getParameter("deliverid");
+        Deliveryrecord de = deliveryrecordService.getDeliveryRecordById(id);
+        request.setAttribute("deliver", de);
+        System.out.println(id);
+        return "deliveryrecord/updateDeliverRecord";
+    }
+    @RequestMapping(value = "/updateDeliverRecord",method = RequestMethod.POST)
+    public String updateDeliverRecord(HttpServletRequest request){
+        String id = request.getParameter("deliverid");
+        String acceptorrefuse = request.getParameter("acceptorrefuse");
+        System.out.println(id);
+        deliveryrecordService.updateDeliver(id,acceptorrefuse);
+        return "redirect:/company/getCompany";
+        }
+
+
     }
 
 
-
-}

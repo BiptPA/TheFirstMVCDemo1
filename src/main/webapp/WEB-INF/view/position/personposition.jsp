@@ -27,7 +27,7 @@
                 <h3>工作地点：${perposition.posloc}</h3>
         </body>
 
-<a href="/resume/getOneResume?positionid=${perposition.positionid}">投简历</a>
+<a href="/resume/getOneResume?positionid=${perposition.positionid}&positions=${perposition.positions}">投简历</a>
 
 
     </table>

@@ -15,13 +15,13 @@ example\dao\IPositionDao.class
 example\service\impl\CompanyServiceImpl.class
 example\service\impl\EmployerServiceImpl.class
 example\service\IResumeService.class
+example\dto\ResumeDto.class
 example\pojo\Company.class
 example\service\IEmployerService.class
 example\dao\IDeliveryDao.class
 example\service\impl\DeliveryrecordServiceImpl.class
 example\service\IDeliveryrecordService.class
 example\controller\ResumeController.class
-example\pojo\DeliverDetail.class
 example\dao\IEmpolyerDao.class
 example\service\impl\ResumeServiceImpl.class
 example\pojo\Employ.class

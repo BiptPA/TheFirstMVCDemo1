@@ -1,5 +1,6 @@
 package example.dao;
 
+import example.pojo.Deliveryrecord;
 import example.pojo.Resume;
 import org.apache.ibatis.annotations.Param;
 
@@ -18,6 +19,7 @@ public interface IResumeDao {
 
     void deleteresume(java.io.Serializable id);
 
+    List<Resume> findDeliverDetail(@Param("resumeid")String resumeid,@Param("userid")String userid);
 
 
 

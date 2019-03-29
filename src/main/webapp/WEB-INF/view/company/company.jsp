@@ -8,11 +8,12 @@
     <title>Title</title>
 </head>
 <body>
-<p><div class="text" style=" text-align:center;"><h1>公司名：${company.companyName}</h1></div></p>
+<p><div class="text" style=" text-align:center;"><h2>公司名：${company.companyName}</h2></div></p>
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>
             <th>职位</th>
+            <th>职位投递详情</th>
         </tr>
         <c:forEach items="${company.positionList}" var="c">
             <tr>
