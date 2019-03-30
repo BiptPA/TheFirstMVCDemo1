@@ -12,6 +12,8 @@ example\service\ICompanyService.class
 example\controller\CompanyController.class
 example\controller\DeliveryrecordController.class
 example\dao\IPositionDao.class
+example\service\impl\EmployServiceImpl.class
+example\controller\EmployController.class
 example\service\impl\CompanyServiceImpl.class
 example\service\impl\EmployerServiceImpl.class
 example\service\IResumeService.class
@@ -21,6 +23,7 @@ example\service\IEmployerService.class
 example\dao\IDeliveryDao.class
 example\service\impl\DeliveryrecordServiceImpl.class
 example\service\IDeliveryrecordService.class
+example\service\IEmployService.class
 example\controller\ResumeController.class
 example\dao\IEmpolyerDao.class
 example\service\impl\ResumeServiceImpl.class

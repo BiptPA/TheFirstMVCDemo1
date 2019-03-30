@@ -42,4 +42,12 @@
     </insert>
 
 
+    <select id="selectInfoByPrimaryKey" resultMap="BaseResultMaper">
+        select
+        <include refid="Base_Column_List"/>
+        from t_deliveryrecord
+        where userid=#{userid,jdbcType=INTEGER}
+    </select>
+
+
 </mapper>

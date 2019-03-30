@@ -57,4 +57,11 @@ public class DeliveryrecordServiceImpl implements IDeliveryrecordService {
     }
 
 
+    @Override
+    public List<Deliveryrecord> getPerDeliveryById(String userid){
+        List<Deliveryrecord> deliveryrinfo = deliveryDao.selectInfoByPrimaryKey(userid);
+        return deliveryrinfo;
+    }
+
+
 }

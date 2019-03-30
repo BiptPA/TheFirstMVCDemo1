@@ -19,5 +19,6 @@ public interface IDeliveryDao {
      */
     List<Deliveryrecord> getRecord(@Param("positionid")String positionid);
 
+    List<Deliveryrecord> selectInfoByPrimaryKey(@Param("userid")String userid);
 
 }

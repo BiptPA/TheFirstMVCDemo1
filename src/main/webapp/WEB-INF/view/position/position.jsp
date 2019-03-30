@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="text" style=" text-align:center;"><h1>所有职位</h1></div>
-<form id="listPosition" method="post">
+
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>

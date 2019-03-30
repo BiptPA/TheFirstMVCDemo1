@@ -16,4 +16,7 @@ int updateDeliver(String id, String acceptorrefuse);
 List<Deliveryrecord> getAllRecord(String positionid);
 
 
+List<Deliveryrecord> getPerDeliveryById(String userid);
+
+
 }

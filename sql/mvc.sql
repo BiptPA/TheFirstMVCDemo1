@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-29 16:59:03
+Date: 2019-03-31 01:47:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -51,27 +51,26 @@ CREATE TABLE `t_deliveryrecord` (
   KEY `userid` (`userid`),
   KEY `positionid` (`positionid`),
   KEY `resumeid` (`resumeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_deliveryrecord
 -- ----------------------------
 INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '3', '5', '赵枫枫', '大数据分析师', '通过');
-INSERT INTO `t_deliveryrecord` VALUES ('4', '2', '2', '5', null, null, null);
 
 -- ----------------------------
 -- Table structure for t_employ
 -- ----------------------------
 DROP TABLE IF EXISTS `t_employ`;
 CREATE TABLE `t_employ` (
-  `auto_id` int(11) NOT NULL AUTO_INCREMENT,
+  `autoId` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) DEFAULT NULL,
-  `real_name` varchar(200) DEFAULT NULL,
-  `sex` varchar(200) DEFAULT NULL,
+  `realname` varchar(255) DEFAULT NULL,
+  `sex` varchar(255) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
-  `account` varchar(200) DEFAULT NULL,
+  `account` varchar(255) DEFAULT NULL,
   `pwd` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`auto_id`)
+  PRIMARY KEY (`autoId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------

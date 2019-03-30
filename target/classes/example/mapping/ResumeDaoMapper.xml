@@ -67,12 +67,12 @@
         where resumeid = #{resumeid,jdbcType=INTEGER}
     </delete>
 
-    <select id="findDeliverDetail" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List" />
-        from t_resume
-        where  userid=#{userid,jdbcType=INTEGER}
-    </select>
+    <!--<select id="findDeliverDetail" resultMap="BaseResultMap">-->
+        <!--select-->
+        <!--<include refid="Base_Column_List" />-->
+        <!--from t_resume-->
+        <!--where  userid=#{userid,jdbcType=INTEGER}-->
+    <!--</select>-->
     <!--<select id="getAllResumes" parameterType="string" resultType="User">-->
     <!--select * from t_resume where resumeid = #{resumeid}-->
     <!--</select>-->
