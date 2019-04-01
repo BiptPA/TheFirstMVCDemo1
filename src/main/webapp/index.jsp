@@ -9,11 +9,7 @@
 </head>
 <body>
 <br>
-<br>
-<br>
-<br>
-<br>
-<form action="/employ/login" method="POST" >
+<form id="form1" action="/employ/login" method="POST" >
     <table width="300" border="1" align="center">
         <tr>
             <td colspan="2">求职者登录</td>
@@ -32,8 +28,30 @@
             <td colspan="2">
                 <input type="submit" name="submit" value="登录"/>
             </td>
+        </tr>
+    </table>
+</form>
 
 
+<form id="form2" action="/company/HrLogin" method="POST" >
+    <table width="300" border="1" align="center">
+        <tr>
+            <td colspan="2">企业人员登录</td>
+        </tr>
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="employerAccount" value="${employer.employerAccount}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="employerPwd" value="${employer.employerPwd}"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="submit" value="登录"/>
+            </td>
         </tr>
     </table>
 </form>

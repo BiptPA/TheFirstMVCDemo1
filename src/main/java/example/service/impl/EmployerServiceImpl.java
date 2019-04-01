@@ -23,4 +23,10 @@ public class EmployerServiceImpl implements IEmployerService {
         }
         return null;
     }
+
+
+    @Override
+    public Employer HrLogin(Employer employer){
+        return empolyerDao.findEmployer(employer);
+    }
 }

@@ -1,5 +1,7 @@
 package example.service;
 
+import example.pojo.Employer;
+
 import javax.servlet.http.HttpSession;
 
 public interface IEmployerService {
@@ -9,4 +11,6 @@ public interface IEmployerService {
      * @return
      */
     String getCompanyId( HttpSession session);
+
+    Employer HrLogin(Employer employer);
 }

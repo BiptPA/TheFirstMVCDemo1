@@ -18,17 +18,6 @@ public class Employer {
 
     private String employerAccount;
 
-
-
-
-    public String getEmployerAccount() {
-        return employerAccount;
-    }
-
-    public void setEmployerAccount(String employerAccount) {
-        this.employerAccount = employerAccount;
-    }
-
     public int getAutoId() {
         return autoId;
     }
@@ -83,5 +72,13 @@ public class Employer {
 
     public void setEmployerEmail(String employerEmail) {
         this.employerEmail = employerEmail;
+    }
+
+    public String getEmployerAccount() {
+        return employerAccount;
+    }
+
+    public void setEmployerAccount(String employerAccount) {
+        this.employerAccount = employerAccount;
     }
 }

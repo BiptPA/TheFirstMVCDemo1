@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<div class="text" style=" text-align:center;"><h1>所有职位</h1></div>
+<div class="text" style=" text-align:center;"><h2>所有职位</h2></div>
 
     <table align="center" valign="center" border="1">
         <tr>
@@ -25,10 +25,9 @@
                 <td><a href="/position/getPersonPosition?positionid=${p.positionid}">职位详情</a></td>
             </tr>
         </c:forEach>
-        <div>
-            <a href="/position/addPositionJsp" >新增职位</a>
-
-        </div>
+        <%--<div>--%>
+            <%--<a href="/position/addPositionJsp" >新增职位</a>--%>
+        <%--</div>--%>
     </table>
 </form>
 </body>

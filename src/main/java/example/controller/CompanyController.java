@@ -1,6 +1,7 @@
 package example.controller;
 
 import example.dto.CompanyDto;
+import example.pojo.Employer;
 import example.pojo.Position;
 import example.service.ICompanyService;
 import example.service.IEmployerService;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/company/")
@@ -41,6 +43,28 @@ public class CompanyController {
             request.setAttribute("company", companyDto);
         }
         return "company/company";
+    }
+
+
+
+    @RequestMapping("HrLogin")
+    public String HrLogin(Employer employer, Map<String,Object> map,HttpSession session){
+        //hr登录
+        Employer resultEmplorer = employerService.HrLogin(employer);
+        if(resultEmplorer!=null) {
+            //跳转welcome界面
+            session.setAttribute("employer", resultEmplorer);
+            return "redirect:/company/getCompany";
+            }
+            else{
+                //跳转到index界面
+                //登录时填写的用户数据
+            map.put("employer",employer);
+            //错误显示
+            map.put("error","登录出错");
+            return "errorpage/dlsb";
+            }
+
     }
 
 

@@ -11,6 +11,7 @@
 </head>
 <body>
 <div class="text" style=" text-align:center;"><h2>简历投递反馈情况</h2></div>
+<div class="text" style=" text-align:left;"><h2>${employ.account},你好！</h2></div>
 <table align="center" valign="center" border="1">
     <tr>
         <th>职位名称</th>

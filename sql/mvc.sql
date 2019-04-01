@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-04-01 17:36:27
+Date: 2019-04-01 23:07:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -56,7 +56,7 @@ CREATE TABLE `t_deliveryrecord` (
 -- ----------------------------
 -- Records of t_deliveryrecord
 -- ----------------------------
-INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '3', '5', '赵枫枫', '大数据分析师', '通过');
+INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '3', '5', '赵枫枫', '大数据分析师', '拒绝');
 
 -- ----------------------------
 -- Table structure for t_employ
@@ -83,15 +83,15 @@ INSERT INTO `t_employ` VALUES ('1', '2', '赵枫枫', '男', '22', 'zhaofengfeng
 -- ----------------------------
 DROP TABLE IF EXISTS `t_employer`;
 CREATE TABLE `t_employer` (
-  `auto_id` int(11) NOT NULL AUTO_INCREMENT,
-  `company_id` varchar(200) DEFAULT NULL,
-  `employer_name` varchar(200) DEFAULT NULL,
-  `employer_pwd` varchar(200) DEFAULT NULL,
-  `employer_address` varchar(200) DEFAULT NULL,
-  `employer_tel` varchar(200) DEFAULT NULL,
-  `employer_email` varchar(200) DEFAULT NULL,
-  `employer_account` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`auto_id`)
+  `autoId` int(11) NOT NULL AUTO_INCREMENT,
+  `companyId` varchar(200) DEFAULT NULL,
+  `employerName` varchar(200) DEFAULT NULL,
+  `employerPwd` varchar(200) DEFAULT NULL,
+  `employerAddress` varchar(200) DEFAULT NULL,
+  `employerTel` varchar(200) DEFAULT NULL,
+  `employerEmail` varchar(200) DEFAULT NULL,
+  `employerAccount` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`autoId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------

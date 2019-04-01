@@ -34,13 +34,33 @@ public class EmployController {
     @RequestMapping(value = "getEmployInfo",method = RequestMethod.GET)
     public String getEmployInfo(HttpServletRequest request){
         //session,先使用一个userid的例子
+        HttpSession session  = request.getSession();
         String userid= null;
         userid="2";
         List<Deliveryrecord> deliveryrecordinfo = deliveryrecordService.getPerDeliveryById(userid);
         request.setAttribute("deliverinfo",deliveryrecordinfo);
         return "employ/employInfo";
-
     }
+
+    @RequestMapping("login")
+    public String login(Employ employ,Map<String,Object> map, HttpSession session){
+        //登录
+        Employ resultEmploy = employService.login(employ);
+        if(resultEmploy!=null){
+            //跳转welcome界面
+            session.setAttribute("employ",resultEmploy);
+            return "redirect:/employ/getEmployInfo";
+        }
+        else {
+            //跳转到index界面
+            //登录时填写的用户数据
+            map.put("employ",employ);
+            //错误信息
+            map.put("error","用户名或密码错误，请重新填写");
+            return "errorpage/dlsb";
+        }
+    }
+
 //    /**
 //     * 使用@SessionAttributes,把model中的employ放入其中,保证了session中存在employ这个对象.
 //     */
@@ -59,27 +79,6 @@ public class EmployController {
 //        }
 //        return "fail";
 //    }
-
-    @RequestMapping("login")
-    public String login(Employ employ,Map<String,Object> map, HttpSession session){
-        //登录
-        Employ resultEmploy = employService.login(employ);
-        if(resultEmploy!=null){
-            //跳转welcome界面
-            session.setAttribute("employ",resultEmploy);
-            return "redirect:/position/getPosition";
-        }
-        else {
-            //跳转到index界面
-            //登录时填写的用户数据
-            map.put("employ",employ);
-            //错误信息
-            map.put("error","用户名或密码错误，请重新填写");
-            return "errorpage/dlsb";
-        }
-    }
-
-
 
 
 

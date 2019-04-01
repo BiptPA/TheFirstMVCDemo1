@@ -8,7 +8,7 @@
     <title></title>
 </head>
 <body>
-登入失败!
+登录失败!请检查账号或密码出错！
 ${message}
 <br>
 <a href="<%=path%>/index.jsp" rel="external nofollow" >返回</a>

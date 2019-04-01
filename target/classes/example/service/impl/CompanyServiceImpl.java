@@ -1,9 +1,11 @@
 package example.service.impl;
 
 import example.dao.ICompanyDao;
+import example.dao.IEmpolyerDao;
 import example.dao.IPositionDao;
 import example.dto.CompanyDto;
 import example.pojo.Company;
+import example.pojo.Employer;
 import example.pojo.Position;
 import example.service.ICompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,8 @@ public class CompanyServiceImpl implements ICompanyService {
     private IPositionDao positionDao;
 
 
+
+
     /**
      * 根据公司ID获取当前公司信息
      * @param companyId
@@ -35,5 +39,7 @@ public class CompanyServiceImpl implements ICompanyService {
         CompanyDto companyDto = CompanyDto.from(company, positionList);
         return companyDto;
     }
+
+
 
 }

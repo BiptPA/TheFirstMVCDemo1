@@ -1,6 +1,7 @@
 package example.service;
 
 import example.dto.CompanyDto;
+import example.pojo.Employer;
 
 public interface ICompanyService {
 
@@ -9,6 +10,8 @@ public interface ICompanyService {
      * @return
      */
     CompanyDto getCompany(String companyId);
+
+
 
 //    String getAllpositions();
 //

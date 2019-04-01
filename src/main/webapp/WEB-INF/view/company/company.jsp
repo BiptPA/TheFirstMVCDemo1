@@ -9,6 +9,7 @@
 </head>
 <body>
 <p><div class="text" style=" text-align:center;"><h2>公司名：${company.companyName}</h2></div></p>
+<div class="text" style=" text-align:left;"><h2>${employer.employerAccount},你好！</h2></div>
     <table align="center" valign="center" border="1">
         <tr>
             <th>职位编号</th>

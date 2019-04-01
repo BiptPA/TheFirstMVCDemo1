@@ -12,6 +12,10 @@ public interface IEmpolyerDao {
      */
     Employer findEmployerByAccount(@Param("account") String account);
 
+
+    Employer findEmployer(Employer employer);
+
+
 //    List<User> getAllUsers();
 //    //接口形式定义了数据库操作方法
 //
