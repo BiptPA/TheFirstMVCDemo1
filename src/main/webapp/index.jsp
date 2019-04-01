@@ -13,19 +13,19 @@
 <br>
 <br>
 <br>
-<form name="form1" action="/position/getPosition" method="GET" >
+<form action="/employ/login" method="POST" >
     <table width="300" border="1" align="center">
         <tr>
-            <td colspan="2">登入窗口</td>
+            <td colspan="2">求职者登录</td>
         </tr>
         <tr>
             <td>用户名:</td>
-            <td><input type="text" name="username">
+            <td><input type="text" name="account" value="${employ.account}"/>
             </td>
         </tr>
         <tr>
             <td>密码:</td>
-            <td><input type="password" name="password"/>
+            <td><input type="password" name="pwd" value="${employ.pwd}"/>
             </td>
         </tr>
         <tr>

@@ -5,6 +5,8 @@ public class Employ {
 
     private int autoId;
 
+    private int userid;
+
     private String realName;
 
     private String sex;
@@ -15,15 +17,20 @@ public class Employ {
 
     private String pwd;
 
-
-
-
     public int getAutoId() {
         return autoId;
     }
 
     public void setAutoId(int autoId) {
         this.autoId = autoId;
+    }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getRealName() {

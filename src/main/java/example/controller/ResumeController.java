@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @RestController
@@ -26,7 +27,14 @@ public class ResumeController {
 
     @RequestMapping(value = "getOneResume",method = RequestMethod.GET)
     public String getOneResume(HttpServletRequest request){
-        List<Resume> oneresume = resumeService.getAllResume();
+        String positions = request.getParameter("positions");
+        try {
+            positions = new String(positions.getBytes("ISO-8859-1"), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        List<Resume> oneresume = resumeService.getAllResumer(positions);
+//        System.out.println(positions);
         request.setAttribute("oneresume",oneresume);
         return "resume/chooseresume";
     }

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-31 01:47:36
+Date: 2019-04-01 17:36:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -51,7 +51,7 @@ CREATE TABLE `t_deliveryrecord` (
   KEY `userid` (`userid`),
   KEY `positionid` (`positionid`),
   KEY `resumeid` (`resumeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_deliveryrecord
@@ -71,11 +71,12 @@ CREATE TABLE `t_employ` (
   `account` varchar(255) DEFAULT NULL,
   `pwd` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`autoId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_employ
 -- ----------------------------
+INSERT INTO `t_employ` VALUES ('1', '2', '赵枫枫', '男', '22', 'zhaofengfeng', '123456');
 
 -- ----------------------------
 -- Table structure for t_employer
@@ -155,7 +156,7 @@ CREATE TABLE `t_resume` (
 -- ----------------------------
 -- Records of t_resume
 -- ----------------------------
-INSERT INTO `t_resume` VALUES ('5', '2', '赵枫枫', '2211958081334', '男', '本科', '北京石油化工学院', '英语', null, '4级', '计算机科学与技术', '1', '大数据分析师', '15000+', '13879987690', '33800239@qq.com', '33800239', '北京丰台');
+INSERT INTO `t_resume` VALUES ('5', '2', '赵枫枫', '2211958081334', '男', '本科', '北京石油化工学院', '英语', null, '', '计算机科学与技术', '1', 'java高级工程师', '15000+', '13879987690', '33800239@qq.com', '33800239', '北京丰台');
 
 -- ----------------------------
 -- Table structure for t_role

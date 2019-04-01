@@ -10,6 +10,8 @@ public interface IResumeDao {
 
     List<Resume> getAllResumes();
 
+    List<Resume> getAllResumer(@Param("positions") String positions);
+
     int insertResumes(Resume resumes);
     //接口形式定义了数据库操作方法
 

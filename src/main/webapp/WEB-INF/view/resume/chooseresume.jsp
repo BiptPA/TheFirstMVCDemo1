@@ -7,11 +7,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <title>Title</title>
     <script type="text/javascript">
-        // function updateResume(id) {
-        //     document.getElementById("listResume").action="/resume/updatereJsp?resumeid="+ id;
-        //     document.getElementById("listResume").submit();
-        // }
-
+        function updateResume(id) {
+            document.getElementById("listResume").action="/resume/updatereJsp?resumeid="+ id;
+            document.getElementById("listResume").submit();
+        }
+    </script>
+        <script type="text/javascript">
          function RWes() {
             var obj1 = document.getElementsByName("res");
             for(var i=0;i<obj1.length;i++){
@@ -78,7 +79,7 @@
                 <td>${resume.email}</td>
                 <td>${resume.qq}</td>
                 <td>${resume.nowaddress}</td>
-                <td><a href="/deliveryrecord/addDeliveryrecord?positions=${resume.positions}&realname=${resume.realname}&positionid=<%=request.getParameter("positionid")%>&resumeid=${resume.resumeid}&userid=${resume.userid}">提交简历</a></td>
+                <td><a href="/deliveryrecord/addDeliveryrecord?positions=<%=request.getParameter("positions")%>&realname=${resume.realname}&positionid=<%=request.getParameter("positionid")%>&resumeid=${resume.resumeid}&userid=${resume.userid}">提交简历</a></td>
                 <td><input type="button" value="修改" onclick="updateResume(${resume.resumeid});"/></td>
                 <td><a href="/resume/deleteresume?id=${resume.resumeid}">删除</a></td>
             </tr>

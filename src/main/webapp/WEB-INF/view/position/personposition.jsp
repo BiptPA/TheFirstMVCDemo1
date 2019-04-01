@@ -23,7 +23,6 @@
                 <h3>职位要求：${perposition.posreq}</h3>
                 <h3>薪   资：${perposition.possal}</h3>
                 <h3>联系电话：${perposition.posphone}</h3>
-
                 <h3>工作地点：${perposition.posloc}</h3>
         </body>
 

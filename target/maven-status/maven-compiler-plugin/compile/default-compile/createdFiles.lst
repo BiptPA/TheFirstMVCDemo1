@@ -23,6 +23,7 @@ example\service\IEmployerService.class
 example\dao\IDeliveryDao.class
 example\service\impl\DeliveryrecordServiceImpl.class
 example\service\IDeliveryrecordService.class
+example\dao\IEmployDao.class
 example\service\IEmployService.class
 example\controller\ResumeController.class
 example\dao\IEmpolyerDao.class

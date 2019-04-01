@@ -19,6 +19,12 @@ public class ResumeServiceImpl implements IResumeService {
     public List<Resume> getAllResume() {
         return resumeDao.getAllResumes();
     }
+
+    @Override
+    public List<Resume> getAllResumer(String positions) {
+        return resumeDao.getAllResumer(positions);
+    }
+
     @Override
     public int insertResume(String realname,String idnum,String sex,String education,String school,String languages,String lanlevel,String comlevel,String major,String workexp,String positions,String exsalary,String phonenum,String email,String qq,String nowaddress){
         Resume resumes = new Resume();
