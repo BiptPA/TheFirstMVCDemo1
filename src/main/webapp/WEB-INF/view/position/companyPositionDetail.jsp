@@ -71,7 +71,7 @@
                 <td>${c.deliverid}</td>
                 <td>${c.positionid}</td>
                 <td>${c.userid}</td>
-                <td>${c.resumeid}</td>
+                <td><a href="/resume/getEmployResume?resumeid=${c.resumeid}">${c.resumeid}</a></td>
                 <td>${c.realname}</td>
                 <td>${c.positions}</td>
                 <td>${c.acceptorrefuse}</td>

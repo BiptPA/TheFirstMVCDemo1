@@ -12,6 +12,8 @@ public interface IResumeDao {
 
     List<Resume> getAllResumer(@Param("positions") String positions);
 
+    List<Resume> getEmployResumeDetail(@Param("resumeid") String resumeid);
+
     int insertResumes(Resume resumes);
     //接口形式定义了数据库操作方法
 

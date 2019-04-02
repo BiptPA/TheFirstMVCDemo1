@@ -40,6 +40,17 @@ public class ResumeController {
     }
 
 
+    //查看求职者的简历
+    @RequestMapping(value = "getEmployResume",method = RequestMethod.GET)
+    public String getEmployResume(HttpServletRequest request){
+        String resumeid = request.getParameter("resumeid");
+        List<Resume> employresume = resumeService.getEmployResumeById(resumeid);
+        request.setAttribute("employresume",employresume);
+        return "resume/getemployresume";
+    }
+
+
+
 
 
 

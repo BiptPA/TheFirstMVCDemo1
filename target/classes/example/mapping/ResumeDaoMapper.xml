@@ -38,7 +38,12 @@
         from t_resume
     </select>
 
-
+    <select id="getEmployResumeDetail" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_resume
+        where resumeid=#{resumeid,jdbcType=INTEGER}
+    </select>
 
 
     <insert id="insertResumes" parameterType="example.pojo.Resume">
