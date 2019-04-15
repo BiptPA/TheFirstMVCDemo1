@@ -45,7 +45,7 @@
         where resumeid=#{resumeid,jdbcType=INTEGER}
     </select>
 
-
+E
     <insert id="insertResumes" parameterType="example.pojo.Resume">
         insert into t_resume(realname, idnum, sex, education, school, languages, lanlevel,comlevel, major, workexp, positions, exsalary, phonenum, email, qq, nowaddress)
         values (#{realname,jdbcType=VARCHAR},#{idnum,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR},#{education,jdbcType=VARCHAR},#{school,jdbcType=VARCHAR},#{languages,jdbcType=VARCHAR},#{lanlevel,jdbcType=VARCHAR},#{comlevel,jdbcType=VARCHAR},#{major,jdbcType=VARCHAR},#{workexp,jdbcType=VARCHAR},#{positions,jdbcType=VARCHAR},#{exsalary,jdbcType=VARCHAR},#{phonenum,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR},#{qq,jdbcType=VARCHAR},#{nowaddress,jdbcType=VARCHAR})

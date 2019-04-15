@@ -78,7 +78,7 @@ public class ResumeController {
         String qq = request.getParameter("qq");
         String nowaddress = request.getParameter("nowaddress");
         int addresume = resumeService.insertResume(realname,idnum,sex,education,school,languages,lanlevel,comlevel,major,workexp,positions,exsalary,phonenum,email,qq,nowaddress);
-        return "redirect:/resume/getResume";
+        return "redirect:/position/getPosition";
     }
 
 
@@ -114,7 +114,7 @@ public class ResumeController {
         String qq = request.getParameter("qq");
         String nowaddress = request.getParameter("nowaddress");
         resumeService.updater(id,realname,idnum,sex,education,school,languages,lanlevel,comlevel,major,workexp,positions,exsalary,phonenum,email,qq,nowaddress);
-        return "redirect:/resume/getResume";
+        return "redirect:/position/getPosition";
     }
 
 
@@ -123,7 +123,7 @@ public class ResumeController {
     public String deleteresume(int id)
 {
     resumeService.deleteresume(id);
-    return "redirect:/resume/getResume";
+    return "redirect:/position/getPosition";
 }
 
 }

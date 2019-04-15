@@ -1,6 +1,7 @@
 package example.controller;
 
 import example.dto.CompanyDto;
+import example.pojo.Employ;
 import example.pojo.Employer;
 import example.pojo.Position;
 import example.service.ICompanyService;
@@ -30,11 +31,15 @@ public class CompanyController {
      * @return
      */
     @RequestMapping(value = "getCompany", method = RequestMethod.GET)
-    public String getCompany(HttpServletRequest request) {
-        HttpSession session  = request.getSession();
-        //根据登录信息获取HR所在公司ID
-        String companyId = employerService.getCompanyId(session);
-        companyId="1";
+    public String getCompany(HttpServletRequest request,HttpSession session) {
+//        HttpSession session  = request.getSession();
+//        //根据登录信息获取HR所在公司ID
+//        String companyId = employerService.getCompanyId(session);
+//        companyId="1";
+
+          String companyId;
+          Employer employer = (Employer) session.getAttribute("employer");
+          companyId =employer.getCompanyId();
 //        System.out.println("公司编号是"+companyId);
         if (null != companyId) {
             //根据公司id获取公司信息和职位列表

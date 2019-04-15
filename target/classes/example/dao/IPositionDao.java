@@ -10,6 +10,8 @@ public interface IPositionDao {
 
     List<Position> getAllPositions();
 
+    List<Position> hrSelectById(String companyId);
+
 //    List<Position> getPersonPositions();
 
     Position selectByPrimaryKey(String positionid);

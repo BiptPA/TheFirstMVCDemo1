@@ -9,6 +9,8 @@ public interface IPositionService {
 
     List<Position> getAllPosition();
 
+    List<Position> hrGetAllPosition(String companyId);
+
 //    List<Position> getPersonPosition();
     Position getperPositionById(String positionid);
 

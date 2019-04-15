@@ -32,11 +32,12 @@ public class EmployController {
     private IEmployService employService;
 
     @RequestMapping(value = "getEmployInfo",method = RequestMethod.GET)
-    public String getEmployInfo(HttpServletRequest request){
+    public String getEmployInfo(HttpServletRequest request,HttpSession session){
         //session,先使用一个userid的例子
-        HttpSession session  = request.getSession();
-        String userid= null;
-        userid="2";
+        String userid;
+
+        Employ employ = (Employ)session.getAttribute("employ");
+        userid = Integer.toString(employ.getUserid());
         List<Deliveryrecord> deliveryrecordinfo = deliveryrecordService.getPerDeliveryById(userid);
         request.setAttribute("deliverinfo",deliveryrecordinfo);
         return "employ/employInfo";

@@ -32,6 +32,13 @@
         from t_position
     </select>
 
+    <select id="hrSelectById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_position
+        where companyId = #{companyId, jdbcType = VARCHAR}
+    </select>
+
     <select id="selectByPrimaryKey" parameterType="String" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />

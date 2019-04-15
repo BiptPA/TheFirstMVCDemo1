@@ -77,7 +77,8 @@ public class ResumeServiceImpl implements IResumeService {
         resume.setEducation(education);
         resume.setSchool(school);
         resume.setLanguages(languages);
-        resume.setComlevel(lanlevel);
+        resume.setLanlevel(lanlevel);
+        resume.setComlevel(comlevel);
         resume.setMajor(major);
         resume.setWorkexp(workexp);
         resume.setPositions(positions);

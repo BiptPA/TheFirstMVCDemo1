@@ -21,6 +21,12 @@ public class PositionServiceImpl implements IPositionService {
         return positionDao.getAllPositions();
     }
 
+
+    @Override
+    public List<Position> hrGetAllPosition(String companyId){
+        List<Position> hrPosition = positionDao.hrSelectById(companyId);
+        return hrPosition;
+    }
 //    @Override
 //    public  List<Position> getPersonPosition(){
 //        return positionDao.getPersonPositions();

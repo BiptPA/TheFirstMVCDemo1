@@ -30,6 +30,14 @@ public class PositionController {
         return "position/position";
     }
 
+    @RequestMapping(value = "hrGetPositions" , method = RequestMethod.GET)
+    public String hrGetPositions(HttpServletRequest request) {
+        String companyId = request.getParameter("companyId");
+        List<Position> companyPosition = positionService.hrGetAllPosition(companyId);
+        request.setAttribute("companyPosition", companyPosition);
+        return "position/hrGetPosition";
+    }
+
     //单个查询
      @RequestMapping(value = "getPersonPosition",method = RequestMethod.GET)
      public String getPersonPosition(HttpServletRequest request){
@@ -62,11 +70,11 @@ public class PositionController {
         String posphone = request.getParameter("posphone");
         String posloc = request.getParameter("posloc");
         positionService.insertPosition(companyId,positions,postype,posdate,posnum,posdes,posreq,possal,posphone,posloc);
-        return "redirect:/position/getPosition";
+        return "redirect:/company/getCompany";
 }
 
 //改
-    @RequestMapping(value = "/updatepositionJsp",method = RequestMethod.POST)
+    @RequestMapping(value = "/updatepositionJsp",method = RequestMethod.GET)
     public String updatepositionJsp(HttpServletRequest request){
         String id = request.getParameter("positionid");
         Position pos = positionService.getPositionById(id);
@@ -88,13 +96,13 @@ public class PositionController {
         String posphone = request.getParameter("posphone");
         String posloc = request.getParameter("posloc");
         positionService.updateposition(id, positions, postype, posdate, posnum, posdes, posreq, possal, posphone, posloc);
-        return "redirect:/position/getPosition";
+        return "redirect:/company/getCompany";
     }
 
     @RequestMapping(value = "/deletePosition")
     public String deletePosition(int id){
         positionService.deletePosition(id);
-        return "redirect:/position/getPosition";
+        return "redirect:/company/getCompany";
     }
 
     /**
