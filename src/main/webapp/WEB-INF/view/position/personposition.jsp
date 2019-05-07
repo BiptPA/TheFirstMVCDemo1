@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf8"
          pageEncoding="utf8"%>
+<%String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -14,9 +17,9 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="../../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
 
-        <script src="../../../js/jquery-1.11.3.min.js"></script>
+        <script src="../../../js/jquery-1.9.1.js"></script>
 
         <script src="../../../js/bootstrap.min.js"></script>
 
@@ -26,7 +29,7 @@
 <div class="container">
         <div class="row"  >
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="../../../img/logo.jpg" width="80px" height="80px" />
+                        <img src="../../../img/logo2.jpg" width="160px" height="80px" />
                 </div>
                 <div align="right" class="col-lg-6 col-md-6 col-sm-6" style="padding-top: 25px;">
                         <h5>${employ.account},你好！</h5>
@@ -63,28 +66,6 @@
                                         <li>
                                                 <a href="/employ/getEmployInfo"/>投递反馈</a>
                                         </li>
-                                        <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">热门职位 <span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                        <li>
-                                                                <a href="#">安卓开发工程师</a>
-                                                        </li>
-                                                        <li>
-                                                                <a href="#">ios开发工程师</a>
-                                                        </li>
-                                                        <li>
-                                                                <a href="#">大数据工程师</a>
-                                                        </li>
-                                                        <li role="separator" class="divider"></li>
-                                                        <li>
-                                                                <a href="#">java高级工程师</a>
-                                                        </li>
-                                                        <li role="separator" class="divider"></li>
-                                                        <li>
-                                                                <a href="#">算法工程师</a>
-                                                        </li>
-                                                </ul>
-                                        </li>
                                 </ul>
                                 <form class="navbar-form navbar-right" role="search">
                                         <div class="form-group">
@@ -98,16 +79,91 @@
 </div>
 
 <div class="container" >
-        <h2 class="text-success">职位名称：${perposition.positions}</h2>
-        <h3 class="text-success">发布时间：${perposition.posdate}</h3>
-        <h3 class="text-success">职位类型：${perposition.postype}</h3>
-        <h3 class="text-success">职位数量：${perposition.posnum}</h3>
-        <h3 class="text-success">职位描述：${perposition.posdes}</h3>
-        <h3 class="text-success">职位要求：${perposition.posreq}</h3>
-        <h3 class="text-success">薪   资：${perposition.possal}</h3>
-        <h3 class="text-success">联系电话：${perposition.posphone}</h3>
-        <h3 class="text-success">工作地点：${perposition.posloc}</h3>
-        <a href="/resume/getOneResume?userid=${employ.userid}&positionid=${perposition.positionid}&positions=${perposition.positions}" class="btn bg-success">投简历</a>
+        <fieldset style="text-align: center">
+                <legend class="text-primary" style="font-size: 25px;width: 1140px" >职位详情</legend>
+                <div class="container"  align="center">
+                        <div class="row" style="background-image: url(<%=basePath%>img/); width: 1100px"  >
+                                <div class=" col-md-6 ">
+                                        <div align="left">
+                                        <ul class="bg-info">
+                                                <li><b style="font-size: 20px;font-family: 华文楷体" class="text-primary">职位名称：${perposition.positions}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体"  class="text-primary">发布时间：${perposition.posdate}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体" class="text-primary">职位类型：${perposition.postype}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体" class="text-primary">职位数量：${perposition.posnum}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体" class="text-primary">职位描述：${perposition.posdes}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体" class="text-primary">职位要求：${perposition.posreq}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体" class="text-primary">薪   资：${perposition.possal}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体" class="text-primary">联系电话：${perposition.posphone}</b></li><br>
+                                                <li><b style="font-size: 18px;font-family: 华文楷体" class="text-primary">工作地点：${perposition.posloc}</b></li><br>
+                                        </ul>
+                                        </div>
+
+                                        <div align="left"><a href="/resume/getOneResume?userid=${employ.userid}&positionid=${perposition.positionid}&positions=${perposition.positions}" class="btn bg-info btn-lg"  >投简历</a></div>
+                                </div>
+
+                                <div class=" col-md-6 "  >
+                                        <%--<div style="background-image: url(/img/b3.jpg)"></div>--%>
+                                        <%--<img src="/img/b3.jpg" width="80%" height="80%">--%>
+                                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                                        <!-- Indicators -->
+                                                        <ol class="carousel-indicators">
+                                                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                                        </ol>
+
+                                                        <!-- Wrapper for slides -->
+                                                        <div class="carousel-inner" role="listbox">
+                                                                <div class="item active">
+                                                                        <img src="/img/b1.jpg" style="width: 520px" height="200px" alt="第一张">
+                                                                        <div class="carousel-caption">
+
+                                                                        </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                        <img src="/img/b2.jpg" style="width: 520px" height="200px" alt="第二张">
+                                                                        <div class="carousel-caption">
+
+                                                                        </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                        <img src="/img/b3.jpg" style="width: 520px" height="200px" alt="第二张">
+                                                                        <div class="carousel-caption">
+
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+
+                                                        <!-- Controls -->
+                                                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                        </a>
+                                                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                        </a>
+                                                </div>
+
+                                </div>
+
+                                <blockquote class="blockquote-reverse" >
+                                        <p style="font-family: 华文楷体;font-size: 20px">生命，需要我们去努力。年轻时，我们要努力锻炼自己的能力，掌握知识.</p>
+                                        <footer> <cite title="Source Title">俞敏洪</cite></footer>
+                                </blockquote>
+
+                        </div>
+                </div>
+        </fieldset>
 </div>
 </body>
 </html>
+<%--<h2 class="text-success">职位名称：${perposition.positions}</h2>--%>
+<%--<h3 class="text-success">发布时间：${perposition.posdate}</h3>--%>
+<%--<h3 class="text-success">职位类型：${perposition.postype}</h3>--%>
+<%--<h3 class="text-success">职位数量：${perposition.posnum}</h3>--%>
+<%--<h3 class="text-success">职位描述：${perposition.posdes}</h3>--%>
+<%--<h3 class="text-success">职位要求：${perposition.posreq}</h3>--%>
+<%--<h3 class="text-success">薪   资：${perposition.possal}</h3>--%>
+<%--<h3 class="text-success">联系电话：${perposition.posphone}</h3>--%>
+<%--<h3 class="text-success">工作地点：${perposition.posloc}</h3>--%>

@@ -43,6 +43,11 @@ public class EmployController {
         return "employ/employInfo";
     }
 
+    @RequestMapping(value = "employLoginJsp",method = RequestMethod.GET)
+    public String employLoginJsp(){
+        return "loginPage/employLogin";
+    }
+
     @RequestMapping("login")
     public String login(Employ employ,Map<String,Object> map, HttpSession session){
         //登录
