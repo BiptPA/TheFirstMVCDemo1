@@ -123,7 +123,7 @@
                     </div>
                     <div align="center" class="form-group form-actions">
                         <div class="col-xs-4 col-xs-offset-4 ">
-                            <button style="text-align: center" type="submit"  class="btn btn-sm btn-info"><span style="text-align: center" class="glyphicon glyphicon-off"></span>登录</button>
+                            <button style="text-align: center" type="submit"  class="btn btn-sm btn-info"><span style="text-align: center" ></span>登录</button>
                         </div>
                     </div>
                     <div class="form-group">
