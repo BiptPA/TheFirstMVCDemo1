@@ -25,17 +25,23 @@
 
     <script src="js/bootstrap.min.js"></script>
 
-    <%--<style>--%>
+    <style>
 
-    <%--body{--%>
-        <%--background-image: url("img/header_bg.jpg");--%>
-    <%--}--%>
-<%--</style>--%>
+    body{
+       background-color: #F6F6F8;
+    }
+
+
+     #bg{
+         background-color: white;
+     }
+</style>
 </head>
 
 <body>
 
 
+<div class="container-fluid" id="bg">
 <!--logo部分-->
 <div class="container">
     <div style="background-image: image(black)">
@@ -44,8 +50,8 @@
             <img src="img/logo2.jpg"  width=160px" height="80px" />
         </div>
         <div align="right" class="col-lg-6 col-md-6 col-sm-6" style="padding-top: 35px;">
-            <a href="/register/addEmployJsp" style="text-decoration: none;color: black;font-size: 16px">求职者注册</a>
-            <a href="/register/addEmployerJsp" style="text-decoration: none;color: black;font-size: 16px">企业注册</a>
+            <a href="/register/addEmployJsp" style="text-decoration: none;color: black;font-size: 10px">求职者注册</a>
+            <a href="/register/addEmployerJsp" style="text-decoration: none;color: black;font-size: 10px">企业注册</a>
         </div>
     </div>
     </div>
@@ -84,6 +90,7 @@
             </div>
         </div>
     </nav>
+</div>
 </div>
 
 <!--轮播图-->
@@ -133,21 +140,85 @@
 
     </div>
 </div>
+<p>
 
+</p>
+
+
+<section class="about-wthree py-3">
+    <div class="container  py-sm-5">
+        <%--<div class="title-sec-w3layouts_pvt text-center">--%>
+            <%--<span class="title-wthree">a world full of possibilities</span>--%>
+            <%--<h4 class="w3layouts_pvt-head">allowing you to expand quickly.</h4>--%>
+        <%--</div>--%>
+        <div class="row head-row-home">
+            <div class="col-md-4 my-4 home-grid">
+                <span class="head-line"></span>
+                <span class="fa fa-info-circle" aria-hidden="true"></span>
+                <h4 class="home-title my-3">why choose us</h4>
+                <p> Pellentesque in ipsum id orci porta dapibus roined magna orem ipsum dolor sit amet,consetetur.</p>
+
+            </div>
+            <div class="col-md-4 my-4 home-grid">
+                <span class="head-line"></span>
+                <span class="fa fa-connectdevelop" aria-hidden="true"></span>
+                <h4 class="home-title my-3">what we do</h4>
+                <p> Pellentesque in ipsum id orci porta dapibus roined magna orem ipsum dolor sit amet,consetetur.</p>
+
+            </div>
+            <div class="col-md-4 my-4 home-grid">
+                <span class="fa fa-users" aria-hidden="true"></span>
+                <h4 class="home-title my-3">explore yourself</h4>
+                <p> Pellentesque in ipsum id orci porta dapibus roined magna orem ipsum dolor sit amet,consetetur.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<p></p>
+<div class="container">
+    <div class="row" align="center">
+        <div class="col-md-3">
+            <img src="img/a1.jpg" width="261px" height="200px">
+        </div>
+        <div class="col-md-3">
+            <img src="img/a2.jpg" width="261px" height="200px">
+        </div>
+        <div class="col-md-3">
+            <img src="img/a3.jpg" width="261px" height="200px">
+        </div>
+        <div class="col-md-3">
+            <img src="img/a5.jpg" width="261px" height="200px">
+        </div>
+    </div>
+</div><br>
+
+
+<div class="container">
+    <div class="footer-top-w3ls">
+        <p class="text-white">Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt
+            ut labore et dolore magna aliquyam
+            erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus
+            est
+            Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata
+            sanctus est Lorem ipsum dolor sit amet. sed diam voluptua. </p>
+    </div>
+</div>
 <!--友情链接和版权信息-->
 <div class="container" style="margin-top: 15px;">
     <div class="row">
         <div class="" align="center">
-            <div style="margin-top: 15px;">
-                <a href=""><b color="black">关于我们</b></a>
-                <a href="#"><b color="black">联系我们</b></a>
-                <a href="#"><b color="black">招贤纳士</b></a>
-                <a href="#"><b color="black">法律声明</b></a>
-                <a href="#"><b color="black">友情链接</b></a>
-                <a href="#"><b color="black">服务声明</b></a>
-                <a href="#"><b color="black">广告声明</b></a>
-                <p style="margin-top: 10px; color: black" >
-                    <b>
+            <div style="margin-top: 15px; font-size: 15px">
+                <a href="#">关于我们</a>
+                <a href="#">联系我们</a>
+                <a href="#">招贤纳士</a>
+                <a href="#">法律声明</a>
+                <a href="#">友情链接</a>
+                <a href="#">服务声明</a>
+                <a href="#">广告声明</a>
+                <p style="margin-top: 12px; color: black" >
+                    <b style="font-size: 15px">
                         北京石油化工学院康庄校区 3086寝  吴逸新  联系电话：XXXX-XXXXXXX
                     </b>
                 </p>

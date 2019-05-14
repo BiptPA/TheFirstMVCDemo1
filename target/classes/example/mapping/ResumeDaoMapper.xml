@@ -45,6 +45,12 @@
         where resumeid=#{resumeid,jdbcType=INTEGER}
     </select>
 
+    <select id="getEmpResume" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_resume
+        where userid=#{userid,jdbcType=INTEGER}
+    </select>
 
     <insert id="insertResumes" parameterType="example.pojo.Resume">
         insert into t_resume(realname,birthdays,sex,city,phonenum,email,school,education,major,workexp,positions,exsalary,exaddress,perdscp)

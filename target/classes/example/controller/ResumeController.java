@@ -48,11 +48,18 @@ public class ResumeController {
     @RequestMapping(value = "getEmployResume",method = RequestMethod.GET)
     public String getEmployResume(HttpServletRequest request){
         String resumeid = request.getParameter("resumeid");
-        List<Resume> employresume = resumeService.getEmployResumeById(resumeid);
+        Resume employresume = resumeService.getEmployResumeById(resumeid);
         request.setAttribute("employresume",employresume);
         return "resume/getemployresume";
     }
 
+    @RequestMapping(value = "perResume",method = RequestMethod.GET)
+    public String perResume(HttpServletRequest request){
+        String userid = request.getParameter("userid");
+        Resume emp = resumeService.getEmp(userid);
+        request.setAttribute("emp",emp);
+        return "resume/employGetOwnResume";
+    }
 
 
 

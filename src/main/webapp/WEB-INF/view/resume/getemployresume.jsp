@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf8"
          pageEncoding="utf8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -54,12 +58,6 @@
                     <li class="active">
                         <a href="/position/getPosition"/>职位浏览<span class="sr-only">(current)</span></a>
                     </li>
-                    <li>
-                        <a href="#">XX</a>
-                    </li>
-                    <li>
-                        <a href="#">XX</a>
-                    </li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
@@ -72,48 +70,40 @@
     </nav>
 </div>
 
-<div class="text-primary" align="center"><h3>求职者简历</h3></div>
-    <div class="container" style="margin-top: 20px">
-        <table class="table  table-striped table-bordered table-hover" align="center"  border="1">
-            <tr class="text-primary">
-                <th>简历编号</th>
-                <th>用户编号</th>
-                <th>姓名</th>
-                <th>生日</th>
-                <th>性别</th>
-                <th>所在城市</th>
-                <th>电话号</th>
-                <th>邮箱</th>
-                <th>学校名称</th>
-                <th>学历</th>
-                <th>专业</th>
-                <th>工作经验</th>
-                <th>期望职位</th>
-                <th>期望薪资</th>
-                <th>期望工作地点</th>
-                <th>个人描述</th>
-            </tr>
-        <c:forEach items="${employresume}" var="e">
-            <tr>
-                <td>${e.resumeid}</td>
-                <td>${e.userid}</td>
-                <td>${e.realname}</td>
-                <td>${e.birthdays}</td>
-                <td>${e.sex}</td>
-                <td>${e.city}</td>
-                <td>${e.phonenum}</td>
-                <td>${e.email}</td>
-                <td>${e.school}</td>
-                <td>${e.education}</td>
-                <td>${e.major}</td>
-                <td>${e.workexp}</td>
-                <td>${e.positions}</td>
-                <td>${e.exsalary}</td>
-                <td>${e.exaddress}</td>
-                <td>${e.perdscp}</td>
-            </tr>
-        </c:forEach>
-        </table>
-    </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" align="left">
+                    <div>
+                        <b style="font-size: 20px;font-family: 华文新魏" ><h2>${employresume.realname}</h2></b>
+                        <span><b style="font-size: 18px;font-family: 华文楷体" >${employresume.sex}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b style="font-size: 18px;font-family: 华文楷体" >${employresume.city}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b style="font-size: 18px;font-family: 华文楷体"  >${employresume.birthdays}</b></span><br><br>
+                        <b style="font-size: 16px;font-family: 华文楷体" ><span class="glyphicon glyphicon-phone">${employresume.phonenum}</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <b style="font-size: 16px;font-family: 华文楷体" ><span class="glyphicon glyphicon-envelope">${employresume.email}</span></b><br>
+                    </div>
+                    <div style="margin-top: 10px">
+                        <div><b style="font-size: 18px;font-family: 华文楷体" >${employresume.school}</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span><b style="font-size: 18px;font-family: 华文楷体" >${employresume.education}</b></span></div>
+                        <div><b style="font-size: 20px;font-family: 华文楷体;margin-top: 10px" >${employresume.major}</b></div>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <b style="font-size: 25px;font-family: 华文楷体" >求职意向：</b><br>
+                        <b style="font-size: 18px;font-family: 华文楷体" >期望职位：${employresume.positions}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><b style="font-size: 18px;font-family: 华文楷体" >期望工作地点：${emp.exaddress}</b></span><br>
+                        <b style="font-size: 18px;font-family: 华文楷体" >期望薪资：${employresume.exsalary}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><b style="font-size: 18px;font-family: 华文楷体" >求职状态：求职</b></span><br>
+                    </div>
+                    <div style="margin-top: 18px">
+                        <div><b style="font-size: 25px;font-family: 华文楷体" >工作经验：</b><br>
+                            <b style="font-size: 18px;font-family: 华文楷体" >${employresume.workexp}</b>
+                        </div><br>
+                        <b style="font-size: 25px;font-family: 华文楷体" >个人描述：</b><br>
+                        <b style="font-size: 18px;font-family: 华文楷体" >${employresume.perdscp}</b><br>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/img/resume.jpg" width="555px" height="450px">
+                </div>
+            </div>
+        </div>
 </body>
 </html>

@@ -18,6 +18,8 @@
 
     <script src="../../../js/bootstrap.min.js"></script>
 
+
+
 </head>
 <body>
 
@@ -77,7 +79,7 @@
     <table class=" table table-striped table-bordered table-hover">
         <tr class="text-primary">
             <th>职位编号</th>
-            <th>职位</th>
+            <th>职位名称</th>
             <th>职位详情</th>
         </tr>
         <c:forEach items="${positions}" var="p">

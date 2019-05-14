@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-    <title>求职者首页</title>
+    <title>求职者个人中心</title>
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,17 +23,23 @@
     <script src="../../../js/bootstrap.min.js"></script>
 
     <style>
+
+        body{
+            background-color: #F4F6F9;
+        }
         #divtable{
             width: 500px;
 
         }
-
+        #bg{
+            background-color: white;
+        }
 
     </style>
 
 </head>
 <body>
-
+<div class="container-fluid" id="bg">
 <!--logo部分-->
 <div class="container">
     <div class="row"  >
@@ -42,7 +48,7 @@
         </div>
         <div align="right" class="col-lg-6 col-md-6 col-sm-6" style="padding-top: 25px;">
             <%--<a href="#" class="btn btn-primary btn-large">登录</a>--%>
-                <h5>${employ.account},你好！</h5>
+                <span style="font-size: 15px" class="glyphicon glyphicon-user"><span>${employ.account},你好！</span></span>
         </div>
     </div>
 </div>
@@ -88,8 +94,9 @@
         </div>
     </nav>
 </div>
+</div>
     <div class="container">
-        <div class="text-primary" align="center"><h3 class="page-header" style="margin-top: 10px">简历投递反馈情况</h3></div>
+        <div class="text-primary" align="center"><h3 class="page-header" style="margin-top: 10px">求职者个人中心</h3></div>
     </div>
 
     <div class="container">
@@ -105,9 +112,9 @@
     <%--<div class="container" >--%>
     <table align="center" class="table table-hover table-striped table-bordered bootstrap-datatable datatable" border="1" id="divtable" style="margin-top: 10px">
     <thead>
-    <tr class="success">
-        <th>职位名称</th>
-        <th>投递反馈</th>
+    <tr class="info">
+        <th>已投递职位名称</th>
+        <th>投递反馈情况</th>
     </tr>
     </thead>
     <c:forEach items="${deliverinfo}" var="c">

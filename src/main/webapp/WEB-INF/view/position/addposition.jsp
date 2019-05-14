@@ -20,9 +20,21 @@
     <script src="../../../js/jquery-1.9.1.js"></script>
 
     <script src="../../../js/bootstrap.min.js"></script>
+
+    <style>
+
+        body{
+            background-color: #F4F6F9;
+        }
+
+
+        #bg{
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-
+<div class="container-fluid" id="bg">
 <div class="container">
     <div class="row"  >
         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -69,11 +81,13 @@
         </div>
     </nav>
 </div>
+</div>
+
 
 <div class="container">
 <form action="/position/addPosition" method="post">
     <fieldset style="text-align: center">
-        <legend class="text-primary" style="font-size: 25px;width: 1140px" >新增职位</legend>
+        <%--<legend class="text-primary" style="font-size: 25px;width: 1140px" >新增职位</legend>--%>
 
         <div class="container"  align="center">
             <div class="row" style="background-image: url(<%=basePath%>img/); width: 1100px"  >

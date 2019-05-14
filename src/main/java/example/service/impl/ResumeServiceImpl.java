@@ -26,8 +26,13 @@ public class ResumeServiceImpl implements IResumeService {
     }
 
     @Override
-    public List<Resume> getEmployResumeById(String resumeid){
+    public Resume getEmployResumeById(String resumeid){
         return resumeDao.getEmployResumeDetail(resumeid);
+    }
+
+    @Override
+    public Resume getEmp(String userid){
+        return resumeDao.getEmpResume(userid);
     }
 
 

@@ -27,9 +27,21 @@
             document.getElementById("listPosition").submit();
         }
     </script>
+
+    <style>
+
+        body{
+            background-color: #F4F6F9;
+        }
+
+
+        #bg{
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-
+<div class="container-fluid" id="bg">
 <div class="container">
     <div class="row"  >
         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -75,11 +87,13 @@
         </div>
     </nav>
 </div>
+</div>
+
 
 <div class="container">
 <form action="/position//updatePosition" method="post">
     <fieldset style="text-align: center">
-        <legend class="text-primary" style="font-size: 25px;width: 1140px" >职位修改</legend>
+        <%--<legend class="text-primary" style="font-size: 25px;width: 1140px" >职位修改</legend>--%>
 
         <div class="container"  align="center">
             <div class="row" style="background-image: url(<%=basePath%>img/); width: 1100px"  >

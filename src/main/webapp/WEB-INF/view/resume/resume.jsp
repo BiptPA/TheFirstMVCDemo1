@@ -94,22 +94,22 @@
 <table align="center" border="1" class="table table-striped table-bordered table-hover">
 
     <tr class="text-primary">
-        <th>简历编号</th>
-        <th>用户编号</th>
+        <%--<th>简历编号</th>--%>
+        <%--<th>用户编号</th>--%>
         <th>姓名</th>
-        <th>生日</th>
-        <th>性别</th>
+        <%--<th>生日</th>--%>
+        <%--<th>性别</th>--%>
         <th>所在城市</th>
         <th>电话号</th>
-        <th>邮箱</th>
-        <th>学校名称</th>
+        <%--<th>邮箱</th>--%>
+        <%--<th>学校名称</th>--%>
         <th>学历</th>
         <th>专业</th>
-        <th>工作经验</th>
+        <%--<th>工作经验</th>--%>
         <th>期望职位</th>
         <th>期望薪资</th>
         <th>期望工作地点</th>
-        <th>个人描述</th>
+        <th>简历详情</th>
         <th>修改简历</th>
         <th>删除简历</th>
     </tr>
@@ -117,22 +117,22 @@
     <c:forEach items="${resume}" var="resume">
         <tbody>
         <tr >
-            <td>${resume.resumeid}</td>
-            <td>${resume.userid}</td>
+            <%--<td>${resume.resumeid}</td>--%>
+            <%--<td>${resume.userid}</td>--%>
             <td>${resume.realname}</td>
-            <td>${resume.birthdays}</td>
-            <td>${resume.sex}</td>
+            <%--<td>${resume.birthdays}</td>--%>
+            <%--<td>${resume.sex}</td>--%>
             <td>${resume.city}</td>
             <td>${resume.phonenum}</td>
-            <td>${resume.email}</td>
-            <td>${resume.school}</td>
+            <%--<td>${resume.email}</td>--%>
+            <%--<td>${resume.school}</td>--%>
             <td>${resume.education}</td>
             <td>${resume.major}</td>
-            <td>${resume.workexp}</td>
+            <%--<td>${resume.workexp}</td>--%>
             <td>${resume.positions}</td>
             <td>${resume.exsalary}</td>
             <td>${resume.exaddress}</td>
-            <td>${resume.perdscp}</td>
+            <td><a href="/resume/perResume?userid=${resume.userid}" class="btn btn-primary">简历详情</a></td>
             <td><input type="button" value="修改" class="btn btn-primary " onclick="updateResume(${resume.resumeid});"/></td>
             <td><a href="/resume/deleteresume?id=${resume.resumeid}" class="btn btn-primary ">删除</a></td>
         </tr>

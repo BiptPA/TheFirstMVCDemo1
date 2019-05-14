@@ -30,11 +30,22 @@
 
     </script>
 
+    <style>
+
+        body{
+            background-color: #F4F6F9;
+        }
+
+
+        #bg{
+            background-color: white;
+        }
+    </style>
 
 
 </head>
 <body>
-
+<div class="container-fluid" id="bg">
 <div class="container">
     <div class="row"  >
         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -79,6 +90,7 @@
             </div>
         </div>
     </nav>
+</div>
 </div>
 
 <div class="container">

@@ -22,9 +22,6 @@ import java.util.List;
 @RequestMapping("/employ/")
 public class EmployController {
 
-//    @Autowired
-//    private IEmployService employService;
-
     @Autowired
     private IDeliveryrecordService deliveryrecordService;
 
@@ -67,6 +64,11 @@ public class EmployController {
         }
     }
 
+//    @RequestMapping(value = "editEmployPwdJsp",method = RequestMethod.GET)
+//    public String editEmployPwdJsp(){
+//        return "employ/editPwd";
+//    }
+//    public String editEmployPwd()
 //    /**
 //     * 使用@SessionAttributes,把model中的employ放入其中,保证了session中存在employ这个对象.
 //     */

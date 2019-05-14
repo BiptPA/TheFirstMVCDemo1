@@ -75,8 +75,8 @@
             <th>职位类型</th>
             <th>发布时间</th>
             <th>职位数量</th>
-            <th>职位描述</th>
-            <th>职位要求</th>
+            <%--<th>职位描述</th>--%>
+            <%--<th>职位要求</th>--%>
             <th>职位薪资</th>
             <th>联系方式</th>
             <th>工作地址</th>
@@ -90,8 +90,8 @@
                 <td>${p.postype}</td>
                 <td>${p.posdate}</td>
                 <td>${p.posnum}</td>
-                <td>${p.posdes}</td>
-                <td>${p.posreq}</td>
+                <%--<td>${p.posdes}</td>--%>
+                <%--<td>${p.posreq}</td>--%>
                 <td>${p.possal}</td>
                 <td>${p.posphone}</td>
                 <td>${p.posloc}</td>
