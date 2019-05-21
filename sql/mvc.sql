@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-05-19 08:44:35
+Date: 2019-05-21 14:25:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,11 +59,6 @@ CREATE TABLE `t_deliveryrecord` (
 -- ----------------------------
 INSERT INTO `t_deliveryrecord` VALUES ('15', '2', '1', '14', '赵枫枫', 'Java研发工程师', '通过');
 INSERT INTO `t_deliveryrecord` VALUES ('17', '2', '8', '15', '赵枫枫', 'iOS研发工程师', null);
-INSERT INTO `t_deliveryrecord` VALUES ('18', '2', '8', '15', '赵枫枫', 'iOS研发工程师', null);
-INSERT INTO `t_deliveryrecord` VALUES ('19', '2', '8', '15', '赵枫枫', 'iOS研发工程师', null);
-INSERT INTO `t_deliveryrecord` VALUES ('20', '2', '8', '15', '赵枫枫', 'iOS研发工程师', null);
-INSERT INTO `t_deliveryrecord` VALUES ('21', '2', '8', '15', '赵枫枫', 'iOS研发工程师', null);
-INSERT INTO `t_deliveryrecord` VALUES ('22', '2', '8', '15', '赵枫枫', 'iOS研发工程师', null);
 
 -- ----------------------------
 -- Table structure for t_employ
