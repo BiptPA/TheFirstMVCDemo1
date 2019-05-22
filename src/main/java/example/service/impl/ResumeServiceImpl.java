@@ -90,12 +90,10 @@ public class ResumeServiceImpl implements IResumeService {
     }
 
 
-@Override
-    public void deleteresume(Serializable id)
-
-{
-    resumeDao.deleteresume(id);
-}
+    @Override
+    public void deleteresume(Serializable id) {
+        resumeDao.deleteresume(id);
+    }
 
 
 }

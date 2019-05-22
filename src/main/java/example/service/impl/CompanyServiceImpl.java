@@ -12,6 +12,7 @@ import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -41,6 +42,25 @@ public class CompanyServiceImpl implements ICompanyService {
         return companyDto;
     }
 
+    @Override
+    public List<Company> getCompanyInfom(){
+        return companyDao.findAllCompany();
+    }
 
+    @Override
+    public void deletecompany(Serializable companyId) {
+        companyDao.deletecompanys(companyId);
+    }
 
+    @Override
+    public int insertCompany(String companyName,String companyDscp,String address,String tel,String email,String companyId){
+        Company companys = new Company();
+        companys.setCompanyName(companyName);
+        companys.setCompanyDscp(companyDscp);
+        companys.setAddress(address);
+        companys.setTel(tel);
+        companys.setEmail(email);
+        companys.setCompanyId(companyId);
+        return companyDao.insertcompanys(companys);
+    }
 }

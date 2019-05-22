@@ -80,6 +80,9 @@
                     <li>
                         <a href="/company/hrLoginJsp" class="navbar-brand">企业登录</a>
                     </li>
+                    <li>
+                        <a href="/admin/adminJsp" class="navbar-brand">管理员登录</a>
+                    </li>
                 </ul>
                 <%--<form class="navbar-form navbar-right" role="search">--%>
                     <%--<div class="form-group">--%>
@@ -201,7 +204,7 @@
 
 <div class="container">
     <div class="footer-top-w3ls">
-        <p class="text-white" style="font-size: 18px">本站是一家专为拥有3至10年工作经验的资深互联网从业者，提供工作机会的招聘网站。本站专注于在为求职者提供更人性化、专业化服务的同时，降低企业端寻觅良才的时间和成本。本站致力于帮助互联网人士做出更好的职业选择，让求职者每一次职业选择变的更加明智。 </p>
+        <p class="text-white" style="font-size: 16px">本站是一家专为拥有3至10年工作经验的资深互联网从业者，提供工作机会的招聘网站。本站专注于在为求职者提供更人性化、专业化服务的同时，降低企业端寻觅良才的时间和成本。本站致力于帮助互联网人士做出更好的职业选择，让求职者每一次职业选择变的更加明智。 </p>
     </div>
 </div>
 <!--友情链接和版权信息-->

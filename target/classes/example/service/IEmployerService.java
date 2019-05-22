@@ -3,6 +3,7 @@ package example.service;
 import example.pojo.Employer;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 public interface IEmployerService {
 
@@ -15,4 +16,8 @@ public interface IEmployerService {
     Employer HrLogin(Employer employer);
 
     int addEmployer(String employerAccount,String employerPwd,String employerName,String employerTel,String employerEmail,String employerAddress,String companyId);
+
+    List<Employer> getEmployerInfom();
+
+    void deleteemployer(java.io.Serializable companyId);
 }

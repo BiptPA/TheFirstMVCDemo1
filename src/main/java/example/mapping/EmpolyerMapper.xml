@@ -42,4 +42,15 @@
         insert into t_employer(employerAccount,employerPwd,employerName,employerTel,employerEmail,employerAddress,companyId)
         values (#{employerAccount,jdbcType=VARCHAR},#{employerPwd,jdbcType=VARCHAR},#{employerName,jdbcType=VARCHAR},#{employerTel,jdbcType=VARCHAR},#{employerEmail,jdbcType=VARCHAR},#{employerAddress,jdbcType=VARCHAR},#{companyId,jdbcType=VARCHAR})
     </insert>
+
+    <select id="getEmployer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_employer
+    </select>
+
+    <delete id="deleteemployers" parameterType="example.pojo.Employer">
+        delete from t_employer
+        where companyId = #{companyId,jdbcType=VARCHAR}
+    </delete>
 </mapper>

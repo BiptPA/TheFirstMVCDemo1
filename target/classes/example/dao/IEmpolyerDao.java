@@ -3,6 +3,8 @@ package example.dao;
 import example.pojo.Employer;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface IEmpolyerDao {
 
     /**
@@ -16,6 +18,10 @@ public interface IEmpolyerDao {
     Employer findEmployer(Employer employer);
 
     int addEmployer(Employer newEmployer);
+
+    List<Employer> getEmployer();
+
+    void deleteemployers(java.io.Serializable companyId);
 
 
 //    List<User> getAllUsers();
