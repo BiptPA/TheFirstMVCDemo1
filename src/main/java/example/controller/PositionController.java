@@ -43,7 +43,6 @@ public class PositionController {
      public String getPersonPosition(HttpServletRequest request){
         String positionid = request.getParameter("positionid");
         Position position = positionService.getperPositionById(positionid);
-      //  System.out.println("控制器单个查询传的id是："+positionid);
          request.setAttribute("perposition",position);
 //        List<Position> personposition = positionService.getPersonPosition();
 //        request.setAttribute("personposition",personposition.get(0));

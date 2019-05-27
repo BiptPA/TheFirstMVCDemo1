@@ -133,7 +133,7 @@
             <td>${resume.positions}</td>
             <td>${resume.exsalary}</td>
             <td>${resume.exaddress}</td>
-            <td><a href="/resume/perResume?userid=${resume.userid}" class="btn btn-primary">简历详情</a></td>
+            <td><a href="/resume/perResume?resumeid=${resume.resumeid}" class="btn btn-primary">简历详情</a></td>
             <td><input type="button" value="修改" class="btn btn-primary " onclick="updateResume(${resume.resumeid});"/></td>
             <td><a href="/resume/deleteresume?id=${resume.resumeid}" class="btn btn-primary ">删除</a></td>
         </tr>

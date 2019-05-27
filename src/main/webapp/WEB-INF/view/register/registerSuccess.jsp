@@ -59,11 +59,13 @@
         </div>
     </nav>
 </div>
+<div class="container">
 <b class="text-success">
     注册成功！
     ${message}
 </b>
 <br >
 <a href="<%=path%>/index.jsp" rel="external nofollow" style="text-decoration: none">返回</a>
+</div>
 </body>
 </html>

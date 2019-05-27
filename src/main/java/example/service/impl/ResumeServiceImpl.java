@@ -31,14 +31,15 @@ public class ResumeServiceImpl implements IResumeService {
     }
 
     @Override
-    public Resume getEmp(String userid){
-        return resumeDao.getEmpResume(userid);
+    public Resume getEmp(String resumeid){
+        return resumeDao.getEmpResume(resumeid);
     }
 
 
     @Override
-    public int insertResume(String realname,String birthdays,String sex,String city,String phonenum, String email, String school, String education,String major,String workexp,String positions,String exsalary,String exaddress,String perdscp){
+    public int insertResume(String userid,String realname,String birthdays,String sex,String city,String phonenum, String email, String school, String education,String major,String workexp,String positions,String exsalary,String exaddress,String perdscp){
         Resume resumes = new Resume();
+        resumes.setUserid(Integer.parseInt(userid));
         resumes.setRealname(realname);
         resumes.setBirthdays(birthdays);
         resumes.setSex(sex);

@@ -11,9 +11,9 @@ public interface IResumeService {
 
     Resume getEmployResumeById(String resumeid);
 
-    Resume getEmp(String userid);
+    Resume getEmp(String resumeid);
 
-    int insertResume(String realname,String birthdays,String sex,String city,String phonenum, String email, String school, String education,String major,String workexp,String positions,String exsalary,String exaddress,String perdscp);
+    int insertResume(String userid,String realname,String birthdays,String sex,String city,String phonenum, String email, String school, String education,String major,String workexp,String positions,String exsalary,String exaddress,String perdscp);
 
     void deleteresume(java.io.Serializable id);
 

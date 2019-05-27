@@ -92,7 +92,7 @@
             <div class="row" style="background-image: url(<%=basePath%>img/); width: 1100px"  >
                 <div class=" col-md-6 ">
                     <div align="left"><p class="bg-info" style="width: 60%;font-size: 20px;margin-top: 10px" align="center">基本信息</p></div>
-                    <div style="color: #46B8DA; font-size: 15px;" align="left" >用户编号:</div> <div align="left"><input type="text" class="form-control" style="width: 60%;"  name="userid" readonly="readonly" value="<%=request.getParameter("userid")%>"/></div><br>
+                    <div style="color: #46B8DA; font-size: 15px;" align="left" >用户编号:</div> <div align="left"><input type="text" class="form-control" style="width: 60%;"  name="userid"  value="<%=request.getParameter("userid")%>"/></div><br>
                     <div style="color: #46B8DA; font-size: 15px;" align="left" >姓名:</div> <div align="left"><input type="text" class="form-control" style="width: 60%;" name="realname"  value="" /></div><br>
                     <div style="color: #46B8DA; font-size: 15px;" align="left" >生日:</div> <div align="left"><input type="date" class="form-control" style="width: 60%;" name="birthdays"  value="" /></div><br>
                     <div style="color: #46B8DA; font-size: 15px;" align="left" >性别:</div> <div align="left"><input type="text" class="form-control" style="width: 60%;" name="sex"  value="" /></div><br>

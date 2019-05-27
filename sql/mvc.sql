@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-05-22 17:53:12
+Date: 2019-05-27 22:28:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,7 +44,7 @@ CREATE TABLE `t_company` (
   `tel` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`autoId`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_company
@@ -68,13 +68,14 @@ CREATE TABLE `t_deliveryrecord` (
   KEY `userid` (`userid`),
   KEY `positionid` (`positionid`),
   KEY `resumeid` (`resumeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_deliveryrecord
 -- ----------------------------
-INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '1', '14', '赵枫枫', 'Java研发工程师', '通过');
-INSERT INTO `t_deliveryrecord` VALUES ('2', '2', '8', '15', '赵枫枫', 'iOS研发工程师', null);
+INSERT INTO `t_deliveryrecord` VALUES ('1', '2', '1', '1', '赵枫枫', 'Java研发工程师', '通过');
+INSERT INTO `t_deliveryrecord` VALUES ('2', '2', '8', '1', '赵枫枫', 'iOS研发工程师', null);
+INSERT INTO `t_deliveryrecord` VALUES ('4', '5', '5', '8', '王健成', '软件工程师', '拒绝');
 
 -- ----------------------------
 -- Table structure for t_employ
@@ -96,6 +97,8 @@ CREATE TABLE `t_employ` (
 -- ----------------------------
 INSERT INTO `t_employ` VALUES ('1', '2', '赵枫枫', '男', '22', 'zhaofengfeng', '123456');
 INSERT INTO `t_employ` VALUES ('2', '3', '张皖豫', '男', '23', 'zhangwanyu', '123456');
+INSERT INTO `t_employ` VALUES ('3', '4', '耿唯开', '男', '24', 'gengweikai', '123456');
+INSERT INTO `t_employ` VALUES ('4', '5', '王健成', '男', '25', 'wangjiancheng', '123456');
 
 -- ----------------------------
 -- Table structure for t_employer
@@ -111,7 +114,7 @@ CREATE TABLE `t_employer` (
   `employerEmail` varchar(200) DEFAULT NULL,
   `employerAccount` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`autoId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_employer
@@ -138,7 +141,7 @@ CREATE TABLE `t_position` (
   `posloc` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`positionid`),
   KEY `userid` (`companyId`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_position
@@ -154,6 +157,7 @@ INSERT INTO `t_position` VALUES ('9', '2', '全栈工程师 ', '研发', '2019-0
 INSERT INTO `t_position` VALUES ('10', '2', '.NET工程师 ', '研发', '2019-04-06', '7名', '进行公司门诊系统开发及维护。', '熟练使用 ASP.NET 开发 Web 应用程序；熟悉 .NET Core 平台，熟练使用 ASP.NET Core 框架开发 Web 应用程序；熟练使用 HTML、CSS、JavaScript 及 Vue.js 编写前端代码；熟悉 SQL Server、MySQL 关系型数据库及 Redis。', '18k-20k', '18710517107', '北京市朝阳区');
 INSERT INTO `t_position` VALUES ('11', '2', 'Android开发工程师 ', '研发', '2019-04-08', '10名', '负责字节跳动效率工具的 Android 端研发；负责高质量的设计和编码；和产品经理配合，参与手机产品需求讨论，功能定义等。 ', '良好的设计和编码品味，热爱写代码能产出高质量的设计和代码； 熟练掌握Java语言，熟悉Java常用的库； 有良好的产品意识，积极乐观，认真负责，乐于协作；。', '25k-40k', '15539676825', '北京市朝阳区');
 INSERT INTO `t_position` VALUES ('12', '1', 'Web前端开发工程师', '研发', '2019-04-09', '12名', '负责运维工具、平台的设计、开发、优化、持续迭代； 为团队引入创新的技术、创新的解决方案，用创新的思路解决问题； 对现存或未来系统进行宏观的思考，规划形成统一的组件、框架或平台。 \r\n', '熟练掌握ES6，CSS3，HTML5等前端技术； 丰富的React、Vue等主流前端框架开发经验； 较好的产品意识，愿意将产品效果做为工作最重要的驱动因素。', '20k-40k', '18811462857', '北京市海淀区');
+INSERT INTO `t_position` VALUES ('13', '2', '新媒体运营', '运营', '2019-05-03', '1', ' 1', ' 1', '1', '1', '1');
 
 -- ----------------------------
 -- Table structure for t_resume
@@ -161,7 +165,7 @@ INSERT INTO `t_position` VALUES ('12', '1', 'Web前端开发工程师', '研发'
 DROP TABLE IF EXISTS `t_resume`;
 CREATE TABLE `t_resume` (
   `resumeid` int(11) NOT NULL AUTO_INCREMENT,
-  `userid` int(11) NOT NULL DEFAULT '2',
+  `userid` int(11) NOT NULL,
   `realname` varchar(255) DEFAULT NULL,
   `birthdays` varchar(255) DEFAULT NULL,
   `sex` varchar(255) DEFAULT NULL,
@@ -178,10 +182,13 @@ CREATE TABLE `t_resume` (
   `perdscp` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`resumeid`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_resume
 -- ----------------------------
 INSERT INTO `t_resume` VALUES ('1', '2', '赵枫枫', '1996-05-02', '男', '北京', '13878789065', '3349583858@qq.com', '北京石油化工学院', '本科', '计算机科学与技术', '北京中软国际公司实训，参与班主任管理系统项目，完成JAVA WEB项目开发和数据库设计', 'Java开发', '10k', '朝阳区', '为人朴实正直，有积极进去的心态，努力拼搏。性格沉稳内敛，做事细心踏实，能吃苦耐劳，对工作有很强的责任感！学习能力、适应能力、承受能力较强，善于挑战自我。');
 INSERT INTO `t_resume` VALUES ('2', '2', '赵枫枫', '1996-05-02', '男', '北京', '13878789065', '3349583858@qq.com', '北京石油化工学院', '本科', '计算机科学与技术', '无', 'iOS研发工程师', '10k', '朝阳区', ' 为人朴实正直，有积极进去的心态，努力拼搏。性格沉稳内敛，做事细心踏实，能吃苦耐劳，对工作有很强的责任感！学习能力、适应能力、承受能力较强，善于挑战自我。');
+INSERT INTO `t_resume` VALUES ('6', '3', '张皖豫', '2019-05-09', '男', '北京', '1393236475', '39320239@qq.com', '北京石油化工学院', '本科', '计算机科学与技术', '无', '软件工程师', '15000+', '朝阳区', ' 略');
+INSERT INTO `t_resume` VALUES ('7', '5', '王健成', '1996-01-01', '男', '北京', '13932364756', '39320239@qq.com', '北京石油化工学院', '本科', '计算机科学与技术', '无', 'java开发', '10000+', '海淀', ' 大学期间任班长一职，音乐社社长，喜欢与人交流，幽默，有团结精神！');
+INSERT INTO `t_resume` VALUES ('8', '5', '王健成', '1996-01-01', '男', '北京', '13932364756', '39320239@qq.com', '北京石油化工学院', '本科', '计算机科学与技术', '无', '软件工程师', '10000+', '朝阳', '  大学期间任班长一职，音乐社社长，喜欢与人交流，幽默，有团结精神！');
