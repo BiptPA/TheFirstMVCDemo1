@@ -31,14 +31,12 @@ public class ResumeController {
     public String getOneResume(HttpServletRequest request){
         String positions = request.getParameter("positions");
         String userid = request.getParameter("userid");
-//        System.out.println(userid);
         try {
             positions = new String(positions.getBytes("ISO-8859-1"), "UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         List<Resume> oneresume = resumeService.getAllResumer(positions,userid);
-//        System.out.println(positions+userid);
         request.setAttribute("oneresume",oneresume);
         return "resume/chooseresume";
     }

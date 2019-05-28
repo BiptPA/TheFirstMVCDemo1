@@ -91,6 +91,11 @@ public class PositionServiceImpl implements IPositionService {
         }
 
 
+        @Override
+        public List<Position> searchposition(){
+        return positionDao.searchPositions();
+
+        }
 
 
     }

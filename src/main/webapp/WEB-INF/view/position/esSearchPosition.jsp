@@ -1,15 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf8"
          pageEncoding="utf8"%>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-    <title>求职者个人中心</title>
+    <title>ES搜索职位</title>
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,33 +18,19 @@
 
     <script src="../../../js/bootstrap.min.js"></script>
 
-    <style>
 
-        /*body{*/
-            /*background-color: #F4F6F9;*/
-        /*}*/
-        #divtable{
-            width: 720px;
-
-        }
-        #bg{
-            background-color: white;
-        }
-
-    </style>
 
 </head>
 <body>
-<div class="container-fluid" id="bg">
-<!--logo部分-->
+
 <div class="container">
     <div class="row"  >
         <div class="col-lg-6 col-md-6 col-sm-6">
             <img src="../../../img/logo2.jpg" width="160px" height="80px" />
         </div>
         <div align="right" class="col-lg-6 col-md-6 col-sm-6" style="padding-top: 25px;">
-            <%--<a href="#" class="btn btn-primary btn-large">登录</a>--%>
-                <span style="font-size: 15px" class="glyphicon glyphicon-user"><span>${employ.account},你好！</span></span>
+            <span style="font-size: 15px" class="glyphicon glyphicon-user"><span>${employ.account},你好！</span></span>
+            <%--<h5>${employ.account},你好！</h5>--%>
         </div>
     </div>
 </div>
@@ -82,11 +64,10 @@
                     <li>
                         <a href="/employ/getEmployInfo" class="navbar-brand"/>投递反馈</a>
                     </li>
-
                 </ul>
-                <form class="navbar-form navbar-right" action="/position/searchPosition" role="search">
+                <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" size="35" placeholder="职位查询">
+                        <input type="text" class="form-control" size="35" placeholder="Search">
                     </div>
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
@@ -94,43 +75,31 @@
         </div>
     </nav>
 </div>
-</div>
-    <div class="container">
-        <div class="text-primary" align="center"><h3 class="page-header" style="margin-top: 20px">求职者个人中心</h3></div>
-    </div>
 
-    <div class="container">
-    <div class="row">
-        &nbsp;<div class="col-md-2" style="margin-top: 10px" >
-        <div align="center"><a href="/position/getPosition" style="text-decoration: none" class="btn btn-primary"><b style="text-align: center">职位浏览</b></a></div>
-        <div align="center"><a href="/resume/getResume?userid=${employ.userid}" style="text-decoration: none" class="btn btn-primary "><b style="text-align: center">我的简历</b></a></div>
-        <div align="center"><a href="/resume/addreJsp?userid=${employ.userid}" style="text-decoration: none" class="btn btn-primary "><b style="text-align: center">新增简历</b></a></div>
-        <div align="center"><a href="/employ/getEmployInfo" style="text-decoration: none" class="btn btn-primary "><b style="text-align: center">投递反馈</b></a></div>
-        </div>
-
-    <div class="col-md-10">
-    <%--<div class="container" >--%>
-    <table align="center" class="table table-hover table-striped table-bordered " border="1" id="divtable" style="margin-top: 10px">
-    <thead>
-    <tr class="text-primary">
-        <th>已投递职位名称</th>
-        <th>投递反馈情况</th>
-    </tr>
-    </thead>
-    <c:forEach items="${deliverinfo}" var="c">
-        <tbody>
-        <tr>
-            <td >${c.positions}</td>
-            <td class="text-success" >${c.acceptorrefuse}</td>
+<div class="container">
+    <table class=" table table-striped table-bordered table-hover">
+        <tr class="text-primary">
+            <th>职位名称</th>
+            <th>职位描述</th>
+            <th>职位要求</th>
+            <th>职位薪资</th>
+            <th>练习电话</th>
+            <th>工作地址</th>
+            <th>发布时间</th>
         </tr>
-        </tbody>
-    </c:forEach>
+        <c:forEach items="${search}" var="s">
+            <tr>
+                <td>${s.positions}</td>
+                <td>${s.posdes}</td>
+                <td>${s.posreq}</td>
+                <td>${s.possal}</td>
+                <td>${s.posphone}</td>
+                <td>${s.posloc}</td>
+                <td>${s.posdate}</td>
+            </tr>
+        </c:forEach>
     </table>
-
-    </div>
-    </div>
-    </div>
-
+</div>
 
 </body>
 </html>

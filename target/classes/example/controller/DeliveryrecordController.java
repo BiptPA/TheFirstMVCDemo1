@@ -50,14 +50,12 @@ public class DeliveryrecordController {
         String id = request.getParameter("deliverid");
         Deliveryrecord de = deliveryrecordService.getDeliveryRecordById(id);
         request.setAttribute("deliver", de);
-        System.out.println(id);
         return "deliveryrecord/updateDeliverRecord";
     }
     @RequestMapping(value = "/updateDeliverRecord",method = RequestMethod.POST)
     public String updateDeliverRecord(HttpServletRequest request){
         String id = request.getParameter("deliverid");
         String acceptorrefuse = request.getParameter("acceptorrefuse");
-        System.out.println(id);
         deliveryrecordService.updateDeliver(id,acceptorrefuse);
         return "redirect:/company/getCompany";
         }

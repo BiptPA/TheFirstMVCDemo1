@@ -37,4 +37,5 @@ public interface IPositionDao {
     List<Position> selectCompanyPosition(@Param("positionid")String positionid);
 
 
+    List<Position> searchPositions();
 }

@@ -32,4 +32,5 @@ public interface IPositionService {
      * @return
      */
 
+    List<Position> searchposition();
 }

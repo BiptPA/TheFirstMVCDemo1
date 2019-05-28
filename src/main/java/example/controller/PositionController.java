@@ -124,5 +124,11 @@ public class PositionController {
         return "position/companyPositionDetail";
     }
 
+    @RequestMapping(value = "searchPosition",method = RequestMethod.GET)
+    public String searchPosition(HttpServletRequest request){
+        List<Position> search = positionService.searchposition();
+        request.setAttribute("search",search);
+        return "position/esSearchPosition";
+    }
 
 }
